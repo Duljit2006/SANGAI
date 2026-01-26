@@ -1,0 +1,173 @@
+/* Map Page - Minimal white layout */
+.map-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+/* Map Container */
+.map-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-svg {
+  display: block;
+}
+
+/* Region Label - Bottom Left of Screen (Fixed Position) */
+.region-label {
+  position: fixed;
+  bottom: 60px;
+  left: 60px;
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #1a3a4a;
+  letter-spacing: 0.08em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+  z-index: 100;
+}
+
+/* Back Button - Top Left of Screen (Fixed Position) */
+.back-button {
+  position: fixed;
+  top: 60px;
+  left: 60px;
+  padding: 12px 24px;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a3a4a;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #1a3a4a;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-button:hover {
+  background-color: #1a3a4a;
+  color: #ffffff;
+  transform: translateX(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* State Paths */
+.state-path {
+  cursor: pointer;
+  /* Synchronized with D3 zoom duration (1.5s) and easing (easeCubicInOut) */
+  transition: fill 0.3s ease, opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* GPU acceleration hints for smoother animations */
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+.state-path:hover {
+  fill: #b8d4c8 !important;
+}
+
+.state-path.inactive {
+  fill: #e8f0ec !important;
+}
+
+.state-path.west-bengal {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.state-path.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.state-path.selected {
+  fill: #a8d5ba !important;
+}
+
+/* District Paths */
+.district-path {
+  cursor: pointer;
+  /* Synchronized with D3 zoom duration (1.5s) and easing (easeCubicInOut) */
+  transition: fill 0.3s ease, opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  /* GPU acceleration hints for smoother animations */
+  will-change: opacity, transform;
+  transform: translateZ(0);
+}
+
+.district-path:hover {
+  fill: #c4ddd0 !important;
+}
+
+.district-path.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.district-path.selected {
+  fill: #8fc4a7 !important;
+}
+
+/* Solution C: Hide entire layer without unmounting from DOM */
+.layer-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Loading State */
+.map-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #888;
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+}
+
+/* Custom Tooltip */
+.custom-tooltip {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-family: 'Georgia', serif;
+  font-size: 1.3rem;
+  /* Increased size as requested */
+  font-weight: 500;
+  color: #1a3a4a;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 9999;
+  white-space: nowrap;
+  transform: translate(-50%, -150%);
+  /* Position above cursor */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-tooltip.visible {
+  opacity: 1;
+}
