@@ -1,0 +1,27 @@
+[
+    {
+        "_id": "TAG001",
+        "name": "hidden-gem",
+        "description": "Less known locations away from mainstream tourism"
+    },
+    {
+        "_id": "TAG002",
+        "name": "nature",
+        "description": "Natural landscapes, forests, and wildlife areas"
+    },
+    {
+        "_id": "TAG003",
+        "name": "culture",
+        "description": "Cultural sites, historical monuments, and heritage locations"
+    },
+    {
+        "_id": "TAG005",
+        "name": "trekking",
+        "description": "Hiking trails and trekking destinations"
+    },
+    {
+        "_id": "TAG009",
+        "name": "adventure",
+        "description": "Adventure activities and outdoor experiences"
+    }
+]

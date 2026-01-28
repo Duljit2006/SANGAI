@@ -1,4 +1,19 @@
-/* Map Page - Minimal white layout */
+/* ===========================================
+   MAP STYLES - SANGAI
+   Dark Forest Green Theme
+   =========================================== */
+
+/* Map Wrapper - Full width container for absolute positioning */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Map Page - Dark layout */
 .map-page {
   position: relative;
   width: 100%;
@@ -6,10 +21,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--bg-dark);
 }
 
-/* Map Container */
+/* Map Container - Centers the SVG */
 .map-container {
   position: relative;
   display: flex;
@@ -21,41 +36,40 @@
   display: block;
 }
 
-/* Region Label - Bottom Left of Screen (Fixed Position) */
+/* Region Label - Bottom Left of Map Container (Absolute Position) */
 .region-label {
-  position: fixed;
-  bottom: 60px;
-  left: 60px;
-  font-family: 'Georgia', serif;
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #1a3a4a;
-  letter-spacing: 0.08em;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
   z-index: 100;
 }
 
-/* Back Button - Top Left of Screen (Fixed Position) */
+/* Back Button - Top Left of Map Container (Absolute Position) */
 .back-button {
-  position: fixed;
-  top: 60px;
-  left: 60px;
+  position: absolute;
+  top: 90px;
+  left: 40px;
   padding: 12px 24px;
-  font-family: 'Georgia', serif;
-  font-size: 1.1rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: #1a3a4a;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #1a3a4a;
+  color: var(--text-primary);
+  background: rgba(235, 235, 211, 0.9);
+  border: 1px solid var(--border-medium);
   border-radius: 8px;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
   z-index: 100;
-  backdrop-filter: blur(4px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 .back-button.visible {
@@ -64,28 +78,59 @@
 }
 
 .back-button:hover {
-  background-color: #1a3a4a;
-  color: #ffffff;
+  background: var(--primary);
+  color: var(--bg-dark);
+  border-color: var(--primary);
   transform: translateX(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* State Paths */
+/* Explore Button - Bottom Right (Diagonal to Back Button) */
+.explore-button {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  padding: 16px 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFE3;
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(109, 129, 150, 0.3);
+}
+
+.explore-button:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: translateX(4px);
+  box-shadow: 0 6px 28px rgba(109, 129, 150, 0.4);
+}
+
+.explore-button:active {
+  transform: translateX(2px) scale(0.98);
+}
+
+/* State Paths - Dark Theme */
 .state-path {
   cursor: pointer;
-  /* Synchronized with D3 zoom duration (1.5s) and easing (easeCubicInOut) */
+  fill: #E8E8D0;
+  stroke: rgba(74, 74, 74, 0.4);
+  stroke-width: 1.5;
   transition: fill 0.3s ease, opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  /* GPU acceleration hints for smoother animations */
   will-change: opacity, transform;
   transform: translateZ(0);
 }
 
 .state-path:hover {
-  fill: #b8d4c8 !important;
+  fill: #D8D8C0 !important;
 }
 
 .state-path.inactive {
-  fill: #e8f0ec !important;
+  fill: #F0F0E0 !important;
 }
 
 .state-path.west-bengal {
@@ -100,21 +145,22 @@
 }
 
 .state-path.selected {
-  fill: #a8d5ba !important;
+  fill: var(--primary) !important;
 }
 
-/* District Paths */
+/* District Paths - Dark Theme */
 .district-path {
   cursor: pointer;
-  /* Synchronized with D3 zoom duration (1.5s) and easing (easeCubicInOut) */
+  fill: #E8E8D0;
+  stroke: rgba(74, 74, 74, 0.3);
+  stroke-width: 1;
   transition: fill 0.3s ease, opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
-  /* GPU acceleration hints for smoother animations */
   will-change: opacity, transform;
   transform: translateZ(0);
 }
 
 .district-path:hover {
-  fill: #c4ddd0 !important;
+  fill: #D8D8C0 !important;
 }
 
 .district-path.hidden {
@@ -123,10 +169,10 @@
 }
 
 .district-path.selected {
-  fill: #8fc4a7 !important;
+  fill: var(--primary) !important;
 }
 
-/* Solution C: Hide entire layer without unmounting from DOM */
+/* Hide entire layer without unmounting from DOM */
 .layer-hidden {
   opacity: 0;
   pointer-events: none;
@@ -140,30 +186,28 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  color: #888;
-  font-family: 'Georgia', serif;
-  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
 }
 
-/* Custom Tooltip */
+/* Custom Tooltip - Dark Theme */
 .custom-tooltip {
   position: fixed;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-surface);
   padding: 12px 20px;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  font-family: 'Georgia', serif;
-  font-size: 1.3rem;
-  /* Increased size as requested */
-  font-weight: 500;
-  color: #1a3a4a;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-medium);
   pointer-events: none;
   z-index: 9999;
   white-space: nowrap;
   transform: translate(-50%, -150%);
-  /* Position above cursor */
   opacity: 0;
   transition: opacity 0.2s ease;
 }

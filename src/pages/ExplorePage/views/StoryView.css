@@ -1,0 +1,488 @@
+/* Story View CSS - Dark Forest Theme match */
+
+.story-view {
+    width: 100%;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+/* HERO SECTION */
+.story-hero {
+    position: relative;
+    height: 85vh;
+    min-height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 5%;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+
+.story-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.story-hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: panSlow 30s linear infinite alternate;
+}
+
+@keyframes panSlow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.overlay-gradient-t {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--bg-dark) 0%, transparent 80%);
+    z-index: 1;
+}
+
+.overlay-gradient-r {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(74, 74, 74, 0.8) 0%, transparent 60%);
+    z-index: 1;
+}
+
+.story-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.story-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    border: 1px solid rgba(109, 129, 150, 0.3);
+    background: rgba(109, 129, 150, 0.1);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    backdrop-filter: blur(8px);
+    margin-bottom: 16px;
+}
+
+.story-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.story-subtitle {
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.story-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    background: var(--primary);
+    color: #FFFFE3;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.story-weather-card {
+    position: absolute;
+    bottom: 80px;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    min-width: 200px;
+    z-index: 2;
+    hidden: none;
+}
+
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    color: #fff;
+}
+
+.weather-row span {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.border-b {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+/* BODY CONTENT */
+.story-body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+/* INTRO GRID */
+.story-grid-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.story-main-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.story-main-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.insights-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 32px;
+    position: sticky;
+    top: 100px;
+}
+
+.insights-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.insight-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.insight-item:last-child {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.insight-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(109, 129, 150, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+}
+
+.insight-label {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.insight-value {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.insight-sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* PILLARS */
+.pillars-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.pillars-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border-subtle);
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: var(--bg-surface);
+    border-color: var(--primary);
+}
+
+.pillars-scroller {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.pillar-card {
+    min-width: 340px;
+    height: 420px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pillar-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+.pillar-card:hover .pillar-bg {
+    transform: scale(1.1);
+}
+
+.pillar-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.pillar-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 24px;
+    z-index: 2;
+}
+
+.pillar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.pillar-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.pillar-content p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* FEATURE */
+.story-feature {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.feature-img-box {
+    position: relative;
+    min-height: 400px;
+}
+
+.feature-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.feature-content {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+}
+
+.feature-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.feature-stats strong {
+    display: block;
+    font-size: 2.5rem;
+    color: var(--text-primary);
+}
+
+.feature-stats span {
+    color: var(--text-secondary);
+}
+
+/* IMPACT */
+.story-impact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.impact-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 32px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    border-color: var(--primary);
+}
+
+.impact-icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(109, 129, 150, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.impact-bar {
+    height: 4px;
+    background: rgba(203, 203, 203, 0.3);
+    border-radius: 2px;
+    margin: 20px 0 8px;
+    overflow: hidden;
+}
+
+.impact-bar .fill {
+    height: 100%;
+    background: var(--primary);
+}
+
+.impact-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .story-hero {
+        height: auto;
+        min-height: 500px;
+    }
+
+    .story-grid-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .story-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-img-box {
+        min-height: 300px;
+    }
+
+    .feature-content {
+        padding: 30px;
+    }
+
+    .story-weather-card {
+        display: none;
+    }
+}

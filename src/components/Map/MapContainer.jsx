@@ -1,6 +1,7 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { geoMercator, geoPath } from 'd3-geo';
 import { zoom, zoomIdentity } from 'd3-zoom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { select } from 'd3-selection';
 import { easeCubicInOut } from 'd3-ease';
 import 'd3-transition'; // Required for .transition() to work with D3
@@ -16,6 +17,13 @@ const MAP_WIDTH = 900;
 const MAP_HEIGHT = 700;
 const PADDING = 40;
 
+/**
+ * Convert name to URL-safe slug (lowercase, spaces→underscores)
+ */
+function toUrlSlug(name) {
+    return name.toLowerCase().replace(/\s+/g, '_');
+}
+
 // Bounds for Northeast India (including West Bengal)
 const NE_BOUNDS = {
     west: 85.8,
@@ -29,16 +37,35 @@ export default function MapContainer() {
     const gRef = useRef(null);
     const zoomBehaviorRef = useRef(null);
     const isTransitioningRef = useRef(false); // Solution A: Transition guard
-    const [isLoaded, setIsLoaded] = useState(false);
+    const isLoaded = true; // Map is considered loaded when component mounts
 
+    const navigate = useNavigate();
     const {
         viewState,
         currentLabel,
         selectedState,
+        selectedDistrict,
         zoomTarget,
         zoomCounter,
-        goBack
+        goBack,
+        selectState
     } = useMapContext();
+
+    /**
+     * Handle Explore button click - navigate based on current selection
+     */
+    const handleExplore = useCallback(() => {
+        if (selectedDistrict) {
+            // District selected → navigate to /:district
+            navigate(`/${toUrlSlug(selectedDistrict)}`);
+        } else if (selectedState) {
+            // State selected → navigate to /:state
+            navigate(`/${toUrlSlug(selectedState)}`);
+        } else {
+            // No selection → navigate to /northeast
+            navigate('/northeast');
+        }
+    }, [navigate, selectedState, selectedDistrict]);
 
     // Preprocess GeoJSON to fix winding order
     const statesData = useMemo(() => preprocessGeoJSON(rawStatesData), []);
@@ -219,9 +246,23 @@ export default function MapContainer() {
         };
     }, [viewState, zoomTarget, zoomCounter, pathGenerator, projection]);
 
+
+    // Sync Map with URL Params (External Control)
+    const { stateId } = useParams();
+
     useEffect(() => {
-        setIsLoaded(true);
-    }, []);
+        if (stateId && isLoaded && statesData && !selectedState) {
+            // Find feature by name (assuming ID matches lowercase name)
+            const feature = statesData.features.find(
+                f => f.properties.NAME_1.toLowerCase() === stateId.toLowerCase()
+            );
+
+            if (feature) {
+                console.log("Auto-selecting state from URL:", feature.properties.NAME_1);
+                selectState(feature.properties.NAME_1, feature);
+            }
+        }
+    }, [stateId, statesData, selectedState, selectState, isLoaded]);
 
     if (!isLoaded || !pathGenerator || !statesData) {
         return (
@@ -232,16 +273,8 @@ export default function MapContainer() {
     }
 
     return (
-        <div
-            className="map-container"
-            onMouseMove={(e) => {
-                const tooltip = document.querySelector('.custom-tooltip');
-                if (tooltip) {
-                    tooltip.style.left = `${e.clientX}px`;
-                    tooltip.style.top = `${e.clientY}px`;
-                }
-            }}
-        >
+        <div className="map-wrapper">
+            {/* Back button and region label - positioned to full-width wrapper */}
             <button
                 className={`back-button ${viewState !== 'default' ? 'visible' : ''}`}
                 onClick={goBack}
@@ -249,34 +282,54 @@ export default function MapContainer() {
                 ← Back
             </button>
 
-            <svg
-                ref={svgRef}
-                width={MAP_WIDTH}
-                height={MAP_HEIGHT}
-                viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
-                className="map-svg"
-                style={{ background: '#fff' }}
+            {/* Explore button - bottom-right corner, diagonal to Back */}
+            <button
+                className="explore-button"
+                onClick={handleExplore}
             >
-                <g ref={gRef}>
-                    <StatesLayer
-                        pathGenerator={pathGenerator}
-                        statesData={statesData}
-                    />
-
-                    {/* Solution C: Always render DistrictsLayer (hidden when not needed)
-                        This eliminates DOM mounting cost during zoom transitions */}
-                    <DistrictsLayer
-                        pathGenerator={pathGenerator}
-                        districts={stateDistricts}
-                        hidden={viewState === 'default'}
-                    />
-                </g>
-            </svg>
-
-            <Tooltip />
+                Explore →
+            </button>
 
             <div className="region-label">
                 {currentLabel}
+            </div>
+
+            {/* Map container - centered SVG */}
+            <div
+                className="map-container"
+                onMouseMove={(e) => {
+                    const tooltip = document.querySelector('.custom-tooltip');
+                    if (tooltip) {
+                        tooltip.style.left = `${e.clientX}px`;
+                        tooltip.style.top = `${e.clientY}px`;
+                    }
+                }}
+            >
+                <svg
+                    ref={svgRef}
+                    width={MAP_WIDTH}
+                    height={MAP_HEIGHT}
+                    viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
+                    className="map-svg"
+                    style={{ background: 'transparent' }}
+                >
+                    <g ref={gRef}>
+                        <StatesLayer
+                            pathGenerator={pathGenerator}
+                            statesData={statesData}
+                        />
+
+                        {/* Solution C: Always render DistrictsLayer (hidden when not needed)
+                            This eliminates DOM mounting cost during zoom transitions */}
+                        <DistrictsLayer
+                            pathGenerator={pathGenerator}
+                            districts={stateDistricts}
+                            hidden={viewState === 'default'}
+                        />
+                    </g>
+                </svg>
+
+                <Tooltip />
             </div>
         </div>
     );

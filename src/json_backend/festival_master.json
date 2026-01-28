@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "FM_HORNBILL_FESTIVAL",
+    "name": "Hornbill Festival",
+    "description": "Celebration of Naga tribal culture with music, dance, and crafts",
+    "tags": [
+      "culture",
+      "music",
+      "tribal"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_ZIRO_MUSIC_FESTIVAL",
+    "name": "Ziro Music Festival",
+    "description": "Indie music festival set in the Ziro valley",
+    "tags": [
+      "music",
+      "youth",
+      "culture"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_WANGALA_FESTIVAL",
+    "name": "Wangala Festival",
+    "description": "Harvest festival of the Garo tribe dedicated to the Sun God",
+    "tags": [
+      "harvest",
+      "tribal",
+      "culture"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_BIHU_FESTIVAL",
+    "name": "Bihu Festival",
+    "description": "Assamese festival marking the agricultural cycle",
+    "tags": [
+      "harvest",
+      "dance",
+      "culture"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_CHAPCHAR_KUT",
+    "name": "Chapchar Kut",
+    "description": "Spring festival of the Mizo people",
+    "tags": [
+      "spring",
+      "dance",
+      "culture"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_YAOSHANG_FESTIVAL",
+    "name": "Yaoshang Festival",
+    "description": "Manipuri version of Holi celebrated with sports and dance",
+    "tags": [
+      "spring",
+      "culture",
+      "sports"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_LOSAR_FESTIVAL",
+    "name": "Losar Festival",
+    "description": "Tibetan New Year celebrated in Sikkim",
+    "tags": [
+      "newyear",
+      "culture",
+      "buddhist"
+    ],
+    "recurring": true
+  },
+  {
+    "_id": "FM_KHARCHI_PUJA",
+    "name": "Kharchi Puja",
+    "description": "Ancient Tripuri royal festival at Chaturdasha Temple",
+    "tags": [
+      "religious",
+      "culture",
+      "heritage"
+    ],
+    "recurring": true
+  }
+]

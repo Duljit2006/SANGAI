@@ -1,0 +1,93 @@
+[
+    {
+        "_id": "NL-PHE-01",
+        "stateCode": "NL",
+        "stateName": "Nagaland",
+        "districtName": "Phek",
+        "region": "northeast"
+    },
+    {
+        "_id": "NL-KOH-01",
+        "stateCode": "NL",
+        "stateName": "Nagaland",
+        "districtName": "Kohima",
+        "region": "northeast"
+    },
+    {
+        "_id": "AS-KAM-01",
+        "stateCode": "AS",
+        "stateName": "Assam",
+        "districtName": "Kamrup",
+        "region": "northeast"
+    },
+    {
+        "_id": "TR-DHL-01",
+        "stateCode": "TR",
+        "stateName": "Tripura",
+        "districtName": "Dhalai",
+        "region": "northeast"
+    },
+    {
+        "_id": "TR-WST-01",
+        "stateCode": "TR",
+        "stateName": "Tripura",
+        "districtName": "West Tripura",
+        "region": "northeast"
+    },
+    {
+        "_id": "SK-GNG-01",
+        "stateCode": "SK",
+        "stateName": "Sikkim",
+        "districtName": "Gangtok",
+        "region": "northeast"
+    },
+    {
+        "_id": "AR-TWG-02",
+        "stateCode": "AR",
+        "stateName": "Arunachal Pradesh",
+        "districtName": "Tawang",
+        "region": "northeast"
+    },
+    {
+        "_id": "AR-LWR-01",
+        "stateCode": "AR",
+        "stateName": "Arunachal Pradesh",
+        "districtName": "Lower Subansiri",
+        "region": "northeast"
+    },
+    {
+        "_id": "ML-WGH-01",
+        "stateCode": "ML",
+        "stateName": "Meghalaya",
+        "districtName": "West Garo Hills",
+        "region": "northeast"
+    },
+    {
+        "_id": "MZ-LNG-01",
+        "stateCode": "MZ",
+        "stateName": "Mizoram",
+        "districtName": "Lunglei",
+        "region": "northeast"
+    },
+    {
+        "_id": "MZ-AZL-01",
+        "stateCode": "MZ",
+        "stateName": "Mizoram",
+        "districtName": "Aizawl",
+        "region": "northeast"
+    },
+    {
+        "_id": "MN-UKL-01",
+        "stateCode": "MN",
+        "stateName": "Manipur",
+        "districtName": "Ukhrul",
+        "region": "northeast"
+    },
+    {
+        "_id": "MN-IMP-01",
+        "stateCode": "MN",
+        "stateName": "Manipur",
+        "districtName": "Imphal West",
+        "region": "northeast"
+    }
+]

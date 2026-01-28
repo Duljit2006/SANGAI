@@ -1,0 +1,1121 @@
+[
+  {
+    "_id": "GUIDE001",
+    "name": "Tashi Lepcha",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 15,
+    "specialties": [
+      "history",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9252980691",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE002",
+    "name": "Zothanpuii",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 12,
+    "specialties": [
+      "wildlife",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9360692858",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE003",
+    "name": "Bimal Sangma",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "nature",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9606555355",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE004",
+    "name": "Mina Taro",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 8,
+    "specialties": [
+      "wildlife",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9425681826",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.9,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE005",
+    "name": "Bimal Sangma",
+    "districtId": "NL-PHE-01",
+    "languages": [
+      "English",
+      "Angami"
+    ],
+    "experienceYears": 9,
+    "specialties": [
+      "wildlife",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9647192657",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.5,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE006",
+    "name": "Nongrang Marak",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "trekking",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9378156038",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE007",
+    "name": "Tajang Panyang",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 3,
+    "specialties": [
+      "history",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9952220149",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE008",
+    "name": "Mina Taro",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 10,
+    "specialties": [
+      "history",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9985270864",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE009",
+    "name": "Kento Vero",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 12,
+    "specialties": [
+      "culture",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9114728029",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE010",
+    "name": "Mina Taro",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 10,
+    "specialties": [
+      "nature",
+      "history"
+    ],
+    "contact": {
+      "phone": "9917551863",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE011",
+    "name": "Pema Bhutia",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 12,
+    "specialties": [
+      "nature",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9599220077",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE012",
+    "name": "Nongrang Marak",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 7,
+    "specialties": [
+      "nature",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9440406683",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE013",
+    "name": "Ramesh Basumatary",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 13,
+    "specialties": [
+      "wildlife",
+      "history"
+    ],
+    "contact": {
+      "phone": "9823758894",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.5,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE014",
+    "name": "Bimal Sangma",
+    "districtId": "MN-UKL-01",
+    "languages": [
+      "English",
+      "Manipuri"
+    ],
+    "experienceYears": 14,
+    "specialties": [
+      "trekking",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9891298603",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.6,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE015",
+    "name": "Along Dai",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 8,
+    "specialties": [
+      "history",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9494792667",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE016",
+    "name": "Zothanpuii",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 8,
+    "specialties": [
+      "wildlife",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9537569846",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.8,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE017",
+    "name": "Dorjee Sherpa",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 3,
+    "specialties": [
+      "culture",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9183540486",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.9,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE018",
+    "name": "Lhakpa Tshering",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "history",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9517854074",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.1,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE019",
+    "name": "R.K. Ningthoujam",
+    "districtId": "ML-WGH-01",
+    "languages": [
+      "English",
+      "Garo"
+    ],
+    "experienceYears": 10,
+    "specialties": [
+      "history",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9765492026",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE020",
+    "name": "Mina Taro",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "nature",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9442601203",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE021",
+    "name": "Tashi Lepcha",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "wildlife",
+      "history"
+    ],
+    "contact": {
+      "phone": "9985762775",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE022",
+    "name": "Dorjee Sherpa",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "wildlife",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9795244828",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.9,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE023",
+    "name": "Tashi Lepcha",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 9,
+    "specialties": [
+      "wildlife",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9351661996",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE024",
+    "name": "Ramesh Basumatary",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 2,
+    "specialties": [
+      "history",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9631157802",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE025",
+    "name": "Zothanpuii",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 9,
+    "specialties": [
+      "wildlife",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9853400665",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.0,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE026",
+    "name": "Tajang Panyang",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 14,
+    "specialties": [
+      "nature",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9152426137",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.8,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE027",
+    "name": "Ramesh Basumatary",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 3,
+    "specialties": [
+      "culture",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9549140715",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.5,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE028",
+    "name": "Ibomcha Meitei",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "nature",
+      "history"
+    ],
+    "contact": {
+      "phone": "9164730114",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE029",
+    "name": "Ramesh Basumatary",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 7,
+    "specialties": [
+      "wildlife",
+      "history"
+    ],
+    "contact": {
+      "phone": "9519609094",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE030",
+    "name": "Along Dai",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 14,
+    "specialties": [
+      "culture",
+      "history"
+    ],
+    "contact": {
+      "phone": "9718779609",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.1,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE031",
+    "name": "Zothanpuii",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "history",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9177801067",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE032",
+    "name": "Kento Vero",
+    "districtId": "ML-WGH-01",
+    "languages": [
+      "English",
+      "Garo"
+    ],
+    "experienceYears": 6,
+    "specialties": [
+      "history",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9729366192",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.8,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE033",
+    "name": "Nongrang Marak",
+    "districtId": "ML-WGH-01",
+    "languages": [
+      "English",
+      "Garo"
+    ],
+    "experienceYears": 8,
+    "specialties": [
+      "nature",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9632471459",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE034",
+    "name": "Ramesh Basumatary",
+    "districtId": "MZ-LNG-01",
+    "languages": [
+      "English",
+      "Mizo"
+    ],
+    "experienceYears": 6,
+    "specialties": [
+      "trekking",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9299953664",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE035",
+    "name": "Ramesh Basumatary",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "nature",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9615164821",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE036",
+    "name": "Dorjee Sherpa",
+    "districtId": "MN-UKL-01",
+    "languages": [
+      "English",
+      "Manipuri"
+    ],
+    "experienceYears": 10,
+    "specialties": [
+      "wildlife",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9531178937",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.6,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE037",
+    "name": "Mina Taro",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 13,
+    "specialties": [
+      "nature",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9835991605",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.9,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE038",
+    "name": "Ramesh Basumatary",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "culture",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9571206628",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.1,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE039",
+    "name": "Nongrang Marak",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 15,
+    "specialties": [
+      "history",
+      "culture"
+    ],
+    "contact": {
+      "phone": "9507392319",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE040",
+    "name": "R.K. Ningthoujam",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 8,
+    "specialties": [
+      "trekking",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9871615597",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE041",
+    "name": "Along Dai",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 12,
+    "specialties": [
+      "trekking",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9624455777",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE042",
+    "name": "Zothanpuii",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 3,
+    "specialties": [
+      "nature",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9749379978",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.9,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE043",
+    "name": "Dorjee Sherpa",
+    "districtId": "NL-PHE-01",
+    "languages": [
+      "English",
+      "Angami"
+    ],
+    "experienceYears": 15,
+    "specialties": [
+      "trekking",
+      "wildlife"
+    ],
+    "contact": {
+      "phone": "9860385128",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE044",
+    "name": "Lhakpa Tshering",
+    "districtId": "ML-WGH-01",
+    "languages": [
+      "English",
+      "Garo"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "wildlife",
+      "history"
+    ],
+    "contact": {
+      "phone": "9492616645",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.1,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE045",
+    "name": "Dorjee Sherpa",
+    "districtId": "TR-DHL-01",
+    "languages": [
+      "English",
+      "Kokborok"
+    ],
+    "experienceYears": 6,
+    "specialties": [
+      "culture",
+      "trekking"
+    ],
+    "contact": {
+      "phone": "9925622243",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.6,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE046",
+    "name": "Nongrang Marak",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 15,
+    "specialties": [
+      "trekking",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9967502232",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.4,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE047",
+    "name": "Along Dai",
+    "districtId": "MN-UKL-01",
+    "languages": [
+      "English",
+      "Manipuri"
+    ],
+    "experienceYears": 14,
+    "specialties": [
+      "history",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9196840526",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.2,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE048",
+    "name": "Zothanpuii",
+    "districtId": "SK-GNG-01",
+    "languages": [
+      "English",
+      "Nepali",
+      "Bhutia"
+    ],
+    "experienceYears": 2,
+    "specialties": [
+      "trekking",
+      "nature"
+    ],
+    "contact": {
+      "phone": "9285752086",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.3,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE049",
+    "name": "Nongrang Marak",
+    "districtId": "AS-KAM-01",
+    "languages": [
+      "Assamese",
+      "English",
+      "Karbi"
+    ],
+    "experienceYears": 5,
+    "specialties": [
+      "trekking",
+      "history"
+    ],
+    "contact": {
+      "phone": "9476013559",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.5,
+    "verified": true
+  },
+  {
+    "_id": "GUIDE050",
+    "name": "Bimal Sangma",
+    "districtId": "AR-TWG-02",
+    "languages": [
+      "English",
+      "Adi"
+    ],
+    "experienceYears": 4,
+    "specialties": [
+      "trekking",
+      "history"
+    ],
+    "contact": {
+      "phone": "9576637767",
+      "whatsapp": true,
+      "email": null,
+      "website": null
+    },
+    "rating": 4.7,
+    "verified": true
+  }
+]

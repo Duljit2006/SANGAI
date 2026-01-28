@@ -1,21 +1,112 @@
+/* ===========================================
+   GLOBAL STYLES - SANGAI
+   Dark Forest Green Theme
+   =========================================== */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* Primary Colors - Slate Blue */
+  --primary: #6D8196;
+  --primary-hover: #5A6F82;
+  --primary-dark: #4A5D6E;
+
+  /* Background Colors - Light Cream Theme */
+  --bg-dark: #FFFFE3;
+  --bg-surface: #F5F5DC;
+  --bg-card: #EBEBD3;
+
+  /* Text Colors - Charcoal Based */
+  --text-primary: #4A4A4A;
+  --text-secondary: #6A6A6A;
+  --text-muted: #8A8A8A;
+
+  /* Border Colors - Silver Based */
+  --border-subtle: rgba(203, 203, 203, 0.4);
+  --border-medium: rgba(203, 203, 203, 0.7);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+/* Layout wrapper */
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+}
+
+.main-content {
+  width: 100%;
+}
+
+/* Accent color */
+:root {
+  --accent: #6D8196;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Loading state styles */
+.loading-state,
+.error-state,
+.empty-state {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: #ffffff;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+.loading-state span,
+.error-state span,
+.empty-state span {
+  font-size: 48px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.error-state span {
+  color: #ef4444;
+}
+
+.empty-state span {
+  color: var(--text-muted);
 }

@@ -1,0 +1,295 @@
+/* ===========================================
+   INTRO PAGE STYLES - SANGAI
+   Premium Scroll Experience
+   =========================================== */
+
+.intro-container {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg-dark);
+}
+
+.intro-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Parallax Background - GPU Optimized */
+.intro-bg {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 110%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    will-change: transform, filter;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Dark Gradient Overlay */
+.intro-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(74, 74, 74, 0.5) 0%,
+            rgba(74, 74, 74, 0.3) 50%,
+            rgba(74, 74, 74, 0.6) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.intro-overlay.text-center {
+    justify-content: center;
+    text-align: center;
+}
+
+.intro-overlay.text-left {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.intro-overlay.text-right {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Content Typography - Enhanced */
+.intro-content {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+.intro-huge-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(3rem, 10vw, 9rem);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.05em;
+    line-height: 0.95;
+    margin-bottom: 24px;
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.4),
+        0 8px 40px rgba(0, 0, 0, 0.2);
+    will-change: transform, opacity, clip-path;
+}
+
+.intro-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 20px;
+    text-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.4),
+        0 8px 32px rgba(0, 0, 0, 0.2);
+    will-change: transform, opacity, clip-path;
+}
+
+.intro-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+    will-change: transform, opacity;
+}
+
+.intro-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    line-height: 1.7;
+    will-change: transform, opacity;
+}
+
+/* Scroll Indicator - Positioned at bottom of section */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 10;
+    pointer-events: none;
+    animation: bounceIndicator 2s ease-in-out infinite;
+}
+
+@keyframes bounceIndicator {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.scroll-indicator .line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom,
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0));
+    animation: scrollPulse 2.5s ease-in-out infinite;
+    transform-origin: top;
+}
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scaleY(0.6);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+/* CTA Section Specific */
+.intro-cta .intro-bg {
+    filter: brightness(0.5);
+}
+
+.intro-cta .intro-overlay {
+    background: radial-gradient(ellipse at center,
+            rgba(74, 74, 74, 0.4) 0%,
+            rgba(74, 74, 74, 0.7) 100%);
+}
+
+/* CTA Button - Premium Feel */
+.explore-btn {
+    padding: 20px 48px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FFFFE3;
+    background: var(--primary);
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow:
+        0 0 0 0 rgba(109, 129, 150, 0.4),
+        0 10px 40px rgba(109, 129, 150, 0.25);
+    will-change: transform, box-shadow;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: left 0.5s ease;
+}
+
+.explore-btn:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow:
+        0 0 30px 8px rgba(109, 129, 150, 0.3),
+        0 20px 60px rgba(109, 129, 150, 0.35);
+}
+
+.explore-btn:hover::before {
+    left: 100%;
+}
+
+.explore-btn:active {
+    transform: scale(0.98);
+}
+
+.btn-arrow {
+    font-size: 1.3rem;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.explore-btn:hover .btn-arrow {
+    transform: translateX(8px);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .intro-overlay {
+        padding: 0 6%;
+    }
+
+    .intro-overlay.text-left,
+    .intro-overlay.text-right {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    .scroll-indicator {
+        bottom: 32px;
+    }
+
+    .explore-btn {
+        padding: 16px 36px;
+        font-size: 1rem;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+
+    .intro-bg,
+    .intro-content,
+    .intro-huge-text,
+    .intro-heading,
+    .intro-subtitle,
+    .intro-text,
+    .explore-btn {
+        animation: none !important;
+        transition: none !important;
+        will-change: auto !important;
+    }
+
+    .scroll-indicator .line {
+        animation: none;
+        opacity: 0.6;
+        transform: scaleY(1);
+    }
+}

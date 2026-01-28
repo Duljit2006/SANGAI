@@ -1,15 +1,13 @@
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router'
 import './App.css'
-import { MapProvider } from './context/MapContext'
-import MapContainer from './components/Map/MapContainer'
 
+/**
+ * SANGAI App Entry Point
+ * Uses React Router for page navigation
+ */
 function App() {
-  return (
-    <MapProvider>
-      <div className="map-page">
-        <MapContainer />
-      </div>
-    </MapProvider>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

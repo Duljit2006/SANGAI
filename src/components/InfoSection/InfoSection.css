@@ -1,0 +1,512 @@
+/* ===========================================
+   INFO SECTION STYLES - SANGAI
+   Dark Forest Green Theme
+   =========================================== */
+
+/* ===========================================
+   HERO SECTION
+   =========================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.hero-section.hero-placeholder {
+    background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-dark) 100%);
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(74, 74, 74, 0.95) 0%,
+            rgba(74, 74, 74, 0.5) 40%,
+            rgba(74, 74, 74, 0.2) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-tagline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+/* ===========================================
+   SECTION TABS NAVIGATION
+   =========================================== */
+
+.section-tabs-container {
+    position: sticky;
+    top: 55px;
+    z-index: 100;
+    background: var(--bg-dark);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 16px 60px;
+}
+
+.section-tabs {
+    display: flex;
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-tab {
+    padding: 12px 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.section-tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border-color: var(--border-medium);
+}
+
+.section-tab.active {
+    color: var(--bg-dark);
+    background: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+
+/* ===========================================
+   CONTENT SECTION BASE
+   =========================================== */
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.content-section-header {
+    margin-bottom: 40px;
+}
+
+.content-section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.content-section-subtitle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* ===========================================
+   STORY SECTION
+   =========================================== */
+
+.story-section {
+    background: var(--bg-dark);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.story-block {
+    background: var(--bg-surface);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid var(--border-subtle);
+}
+
+.story-block-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.story-block-title::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+.story-block-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+/* Full width description */
+.story-block.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ===========================================
+   DESTINATION SECTION
+   =========================================== */
+
+.destination-section {
+    background: var(--bg-surface);
+}
+
+.destination-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.filter-chip {
+    padding: 10px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+    background: var(--bg-dark);
+    border-color: var(--border-medium);
+}
+
+.filter-chip.active {
+    background: var(--primary);
+    color: var(--bg-dark);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ===========================================
+   DESTINATION CARD
+   =========================================== */
+
+.destination-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(74, 74, 74, 0.15);
+}
+
+.destination-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-image-container {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    background: var(--primary);
+    color: #FFFFE3;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.card-location {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 12px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ===========================================
+   GUIDE SECTION
+   =========================================== */
+
+.guide-section {
+    background: var(--bg-dark);
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.guide-card {
+    background: var(--bg-surface);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--border-subtle);
+}
+
+.guide-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.guide-card-icon {
+    font-size: 1.5rem;
+}
+
+.guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide-list-item {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    line-height: 1.5;
+}
+
+.guide-list-item:last-child {
+    border-bottom: none;
+}
+
+/* Photography status colors */
+.photo-status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.photo-status.green {
+    background: #22c55e;
+}
+
+.photo-status.yellow {
+    background: #eab308;
+}
+
+.photo-status.red {
+    background: #ef4444;
+}
+
+/* ===========================================
+   FESTIVAL SECTION
+   =========================================== */
+
+.festival-section {
+    background: var(--bg-surface);
+}
+
+.festival-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Festival Card */
+.festival-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.festival-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(74, 74, 74, 0.15);
+}
+
+.festival-image-container {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.festival-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.festival-date-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 227, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.festival-date-badge span {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+}
+
+.eco-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    background: var(--primary);
+    color: #FFFFE3;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.festival-content {
+    padding: 20px;
+}
+
+.festival-type {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.festival-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.festival-location {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ===========================================
+   NO DATA STATE
+   =========================================== */
+
+.no-data {
+    text-align: center;
+    padding: 80px 40px;
+    color: var(--text-muted);
+}
+
+.no-data-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.no-data-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+}

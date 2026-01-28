@@ -1,0 +1,2502 @@
+[
+  {
+    "_id": "HOME001",
+    "placeId": "HP002",
+    "hostName": "Tashi Sherpa",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 5,
+    "amenities": [
+      "meals",
+      "trekking-help",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9509056661",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME002",
+    "placeId": "HP001",
+    "hostName": "Tashi Sherpa",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "trekking-help",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9923337820",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME003",
+    "placeId": "HP056",
+    "hostName": "Dorjee Lepcha",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 4,
+    "amenities": [
+      "bonfire",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9110491419",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME004",
+    "placeId": "HP092",
+    "hostName": "Kento Vero",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 3,
+    "amenities": [
+      "local-guide",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9678778885",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME005",
+    "placeId": "HP100",
+    "hostName": "Nongrang Marak",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 3,
+    "amenities": [
+      "trekking-help",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9424322837",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME006",
+    "placeId": "HP078",
+    "hostName": "Ibomcha Meitei",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 5,
+    "amenities": [
+      "traditional-food",
+      "local-guide",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9219874115",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME007",
+    "placeId": "HP095",
+    "hostName": "Ramesh Basumatary",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "bonfire",
+      "wifi",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9981161594",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME008",
+    "placeId": "HP046",
+    "hostName": "Pema Bhutia",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 4,
+    "amenities": [
+      "bonfire",
+      "local-guide",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9346666535",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME009",
+    "placeId": "HP099",
+    "hostName": "Dorjee Lepcha",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 5,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9423934246",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME010",
+    "placeId": "HP052",
+    "hostName": "Ramesh Basumatary",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 6,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9501979341",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME011",
+    "placeId": "HP003",
+    "hostName": "Dorjee Lepcha",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 5,
+    "amenities": [
+      "trekking-help",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9287229808",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME012",
+    "placeId": "HP040",
+    "hostName": "Pema Bhutia",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 4,
+    "amenities": [
+      "local-guide",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9862661948",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME013",
+    "placeId": "HP079",
+    "hostName": "Chingkheinganba",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 3,
+    "amenities": [
+      "meals",
+      "wifi",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9510516387",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME014",
+    "placeId": "HP033",
+    "hostName": "Nongrang Marak",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 3,
+    "amenities": [
+      "trekking-help",
+      "wifi",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9521947440",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME015",
+    "placeId": "HP010",
+    "hostName": "Tashi Sherpa",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "bonfire",
+      "meals",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9593084949",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME016",
+    "placeId": "HP042",
+    "hostName": "Kento Vero",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 2,
+    "amenities": [
+      "wifi",
+      "local-guide",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9896159493",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME017",
+    "placeId": "HP096",
+    "hostName": "Kento Vero",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "bonfire",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9863314183",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME018",
+    "placeId": "HP010",
+    "hostName": "Ramesh Basumatary",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9781302673",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME019",
+    "placeId": "HP024",
+    "hostName": "Zothanpuii",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 6,
+    "amenities": [
+      "meals",
+      "wifi",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9661463076",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME020",
+    "placeId": "HP023",
+    "hostName": "Ramesh Basumatary",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "trekking-help",
+      "bonfire",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9919589144",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME021",
+    "placeId": "HP016",
+    "hostName": "Tajang Panyang",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9787639896",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME022",
+    "placeId": "HP044",
+    "hostName": "Kento Vero",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 2,
+    "amenities": [
+      "meals",
+      "trekking-help",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9703934185",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME023",
+    "placeId": "HP084",
+    "hostName": "Lalthansanga",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 5,
+    "amenities": [
+      "local-guide",
+      "wifi",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9676701905",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME024",
+    "placeId": "HP003",
+    "hostName": "Tashi Sherpa",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "wifi",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9435117660",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME025",
+    "placeId": "HP045",
+    "hostName": "Mina Doley",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "trekking-help",
+      "local-guide",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9397286961",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME026",
+    "placeId": "HP038",
+    "hostName": "Bimal Sangma",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 4,
+    "amenities": [
+      "trekking-help",
+      "traditional-food",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9490595991",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME027",
+    "placeId": "HP081",
+    "hostName": "Chingkheinganba",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 6,
+    "amenities": [
+      "trekking-help",
+      "local-guide",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9438962157",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME028",
+    "placeId": "HP072",
+    "hostName": "Bimal Sangma",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 5,
+    "amenities": [
+      "meals",
+      "wifi",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9638849561",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME029",
+    "placeId": "HP065",
+    "hostName": "Thangboi Sailo",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "bonfire",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9597886514",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME030",
+    "placeId": "HP042",
+    "hostName": "Tashi Sherpa",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 3,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9480054073",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME031",
+    "placeId": "HP027",
+    "hostName": "Ibomcha Meitei",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 4,
+    "amenities": [
+      "local-guide",
+      "meals",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9329279749",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME032",
+    "placeId": "HP005",
+    "hostName": "Tashi Sherpa",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 6,
+    "amenities": [
+      "local-guide",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9975368324",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME033",
+    "placeId": "HP007",
+    "hostName": "Ibomcha Meitei",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "wifi",
+      "traditional-food",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9753347079",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME034",
+    "placeId": "HP027",
+    "hostName": "Ibomcha Meitei",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 5,
+    "amenities": [
+      "local-guide",
+      "traditional-food",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9782199493",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME035",
+    "placeId": "HP002",
+    "hostName": "Dorjee Lepcha",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 2,
+    "amenities": [
+      "bonfire",
+      "traditional-food",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9356857502",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME036",
+    "placeId": "HP043",
+    "hostName": "Thangboi Sailo",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "wifi",
+      "meals",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9470454240",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME037",
+    "placeId": "HP046",
+    "hostName": "Dorjee Lepcha",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "trekking-help",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9813831523",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME038",
+    "placeId": "HP041",
+    "hostName": "Lalthansanga",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "meals",
+      "trekking-help",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9302189570",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME039",
+    "placeId": "HP100",
+    "hostName": "Along Dai",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "meals",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9712276722",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME040",
+    "placeId": "HP023",
+    "hostName": "Chingkheinganba",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 4,
+    "amenities": [
+      "meals",
+      "bonfire",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9708503450",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME041",
+    "placeId": "HP069",
+    "hostName": "Tajang Panyang",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 4,
+    "amenities": [
+      "traditional-food",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9461974533",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME042",
+    "placeId": "HP029",
+    "hostName": "Ramesh Basumatary",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 5,
+    "amenities": [
+      "meals",
+      "traditional-food",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9819063376",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME043",
+    "placeId": "HP029",
+    "hostName": "Pema Bhutia",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "trekking-help",
+      "local-guide",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9993678867",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME044",
+    "placeId": "HP024",
+    "hostName": "Lalthansanga",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 2,
+    "amenities": [
+      "bonfire",
+      "meals",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9389621997",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME045",
+    "placeId": "HP057",
+    "hostName": "Dorjee Lepcha",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 5,
+    "amenities": [
+      "trekking-help",
+      "wifi",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9603785646",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME046",
+    "placeId": "HP098",
+    "hostName": "Along Dai",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "wifi",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9708962147",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME047",
+    "placeId": "HP013",
+    "hostName": "Along Dai",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 6,
+    "amenities": [
+      "trekking-help",
+      "local-guide",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9403480659",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME048",
+    "placeId": "HP066",
+    "hostName": "Dorjee Lepcha",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 3,
+    "amenities": [
+      "meals",
+      "trekking-help",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9341515380",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME049",
+    "placeId": "HP057",
+    "hostName": "Dorjee Lepcha",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 5,
+    "amenities": [
+      "trekking-help",
+      "local-guide",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9235951545",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME050",
+    "placeId": "HP039",
+    "hostName": "Ibomcha Meitei",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "trekking-help",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9954246313",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME051",
+    "placeId": "HP053",
+    "hostName": "Kento Vero",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 4,
+    "amenities": [
+      "traditional-food",
+      "local-guide",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9140738992",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME052",
+    "placeId": "HP080",
+    "hostName": "Lalthansanga",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "meals",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9757195436",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME053",
+    "placeId": "HP011",
+    "hostName": "Ibomcha Meitei",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 6,
+    "amenities": [
+      "traditional-food",
+      "local-guide",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9518500875",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME054",
+    "placeId": "HP090",
+    "hostName": "Nongrang Marak",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "trekking-help",
+      "bonfire",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9584908806",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME055",
+    "placeId": "HP002",
+    "hostName": "Ibomcha Meitei",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9296956249",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME056",
+    "placeId": "HP042",
+    "hostName": "Kento Vero",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9328275997",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME057",
+    "placeId": "HP071",
+    "hostName": "Along Dai",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "trekking-help",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9874239270",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME058",
+    "placeId": "HP019",
+    "hostName": "Along Dai",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "bonfire",
+      "wifi",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9621576988",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME059",
+    "placeId": "HP041",
+    "hostName": "Pema Bhutia",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "wifi",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9516817397",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME060",
+    "placeId": "HP077",
+    "hostName": "Tashi Sherpa",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 2,
+    "amenities": [
+      "wifi",
+      "meals",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9300894096",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME061",
+    "placeId": "HP039",
+    "hostName": "Nongrang Marak",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "wifi",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9224294412",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME062",
+    "placeId": "HP085",
+    "hostName": "Along Dai",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9964168241",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME063",
+    "placeId": "HP095",
+    "hostName": "Nongrang Marak",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "traditional-food",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9784247125",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME064",
+    "placeId": "HP054",
+    "hostName": "Tashi Sherpa",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "trekking-help",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9554931630",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME065",
+    "placeId": "HP085",
+    "hostName": "Ramesh Basumatary",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 3,
+    "amenities": [
+      "trekking-help",
+      "wifi",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9141497583",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME066",
+    "placeId": "HP079",
+    "hostName": "Ibomcha Meitei",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 3,
+    "amenities": [
+      "traditional-food",
+      "wifi",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9656728489",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME067",
+    "placeId": "HP010",
+    "hostName": "Tashi Sherpa",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 3,
+    "amenities": [
+      "traditional-food",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9471382138",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME068",
+    "placeId": "HP029",
+    "hostName": "Tashi Sherpa",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "local-guide",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9390984119",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME069",
+    "placeId": "HP084",
+    "hostName": "Lalthansanga",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "trekking-help",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9357165438",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME070",
+    "placeId": "HP092",
+    "hostName": "Pema Bhutia",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "local-guide",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9145934249",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME071",
+    "placeId": "HP088",
+    "hostName": "Thangboi Sailo",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 6,
+    "amenities": [
+      "trekking-help",
+      "meals",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9795305436",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME072",
+    "placeId": "HP012",
+    "hostName": "Thangboi Sailo",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 5,
+    "amenities": [
+      "trekking-help",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9586095340",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME073",
+    "placeId": "HP034",
+    "hostName": "Tashi Sherpa",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 3,
+    "amenities": [
+      "local-guide",
+      "meals",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9619633427",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME074",
+    "placeId": "HP040",
+    "hostName": "Along Dai",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "local-guide",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9397118938",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME075",
+    "placeId": "HP022",
+    "hostName": "Dorjee Lepcha",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 4,
+    "amenities": [
+      "meals",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9933979049",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME076",
+    "placeId": "HP079",
+    "hostName": "Pema Bhutia",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 3,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9122432675",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME077",
+    "placeId": "HP013",
+    "hostName": "Zothanpuii",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "trekking-help",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9911306451",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME078",
+    "placeId": "HP094",
+    "hostName": "Along Dai",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 4,
+    "amenities": [
+      "bonfire",
+      "wifi",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9586081492",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME079",
+    "placeId": "HP060",
+    "hostName": "Along Dai",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 5,
+    "amenities": [
+      "meals",
+      "bonfire",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9250797845",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME080",
+    "placeId": "HP033",
+    "hostName": "Ramesh Basumatary",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 4,
+    "amenities": [
+      "local-guide",
+      "wifi",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9672847526",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME081",
+    "placeId": "HP084",
+    "hostName": "Zothanpuii",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9889061099",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME082",
+    "placeId": "HP006",
+    "hostName": "Lalthansanga",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 2,
+    "amenities": [
+      "local-guide",
+      "traditional-food",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9537845664",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME083",
+    "placeId": "HP052",
+    "hostName": "Bimal Sangma",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 4,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9277242952",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME084",
+    "placeId": "HP048",
+    "hostName": "Thangboi Sailo",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9380672579",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME085",
+    "placeId": "HP085",
+    "hostName": "Ibomcha Meitei",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "bonfire",
+      "traditional-food",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9251892511",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME086",
+    "placeId": "HP087",
+    "hostName": "Pema Bhutia",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 5,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9741278491",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME087",
+    "placeId": "HP015",
+    "hostName": "Dorjee Lepcha",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 2,
+    "amenities": [
+      "trekking-help",
+      "wifi",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9638605568",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME088",
+    "placeId": "HP042",
+    "hostName": "Thangboi Sailo",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 4,
+    "amenities": [
+      "traditional-food",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9196030584",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME089",
+    "placeId": "HP094",
+    "hostName": "Ramesh Basumatary",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 6,
+    "amenities": [
+      "meals",
+      "bonfire",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9880202063",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME090",
+    "placeId": "HP051",
+    "hostName": "Thangboi Sailo",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1800,
+    "maxGuests": 3,
+    "amenities": [
+      "bonfire",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9157639349",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME091",
+    "placeId": "HP030",
+    "hostName": "Zothanpuii",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 1000,
+    "maxGuests": 3,
+    "amenities": [
+      "wifi",
+      "trekking-help",
+      "meals"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9569899478",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME092",
+    "placeId": "HP035",
+    "hostName": "Chingkheinganba",
+    "title": "Riverside Bamboo Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 5,
+    "amenities": [
+      "meals",
+      "local-guide",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9382934699",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME093",
+    "placeId": "HP048",
+    "hostName": "Dorjee Lepcha",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "traditional-food"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9676099200",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME094",
+    "placeId": "HP042",
+    "hostName": "Nongrang Marak",
+    "title": "Hilltop Village Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 6,
+    "amenities": [
+      "local-guide",
+      "bonfire",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9963232939",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME095",
+    "placeId": "HP090",
+    "hostName": "Zothanpuii",
+    "title": "Heritage Family Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "bonfire",
+      "local-guide"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9843750273",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME096",
+    "placeId": "HP022",
+    "hostName": "Dorjee Lepcha",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 3,
+    "amenities": [
+      "local-guide",
+      "bonfire",
+      "wifi"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9767151400",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME097",
+    "placeId": "HP030",
+    "hostName": "Lalthansanga",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 2000,
+    "maxGuests": 5,
+    "amenities": [
+      "traditional-food",
+      "bonfire",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9667569904",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME098",
+    "placeId": "HP067",
+    "hostName": "Zothanpuii",
+    "title": "Eco-Friendly Forest Homestay",
+    "pricePerNight": 1500,
+    "maxGuests": 5,
+    "amenities": [
+      "local-guide",
+      "traditional-food",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9756784159",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": false,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME099",
+    "placeId": "HP025",
+    "hostName": "Tashi Sherpa",
+    "title": "Mountain View Homestay",
+    "pricePerNight": 1200,
+    "maxGuests": 6,
+    "amenities": [
+      "wifi",
+      "meals",
+      "bonfire"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9819226643",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  },
+  {
+    "_id": "HOME100",
+    "placeId": "HP075",
+    "hostName": "Bimal Sangma",
+    "title": "Traditional Tribal Homestay",
+    "pricePerNight": 800,
+    "maxGuests": 2,
+    "amenities": [
+      "traditional-food",
+      "local-guide",
+      "trekking-help"
+    ],
+    "images": [
+      "https://example.com/homestay1.jpg",
+      "https://example.com/homestay2.jpg"
+    ],
+    "contact": {
+      "phone": "9983652538",
+      "whatsapp": false,
+      "email": null,
+      "website": null
+    },
+    "verified": true,
+    "createdAt": "2026-01-01"
+  }
+]

@@ -1,0 +1,296 @@
+/* ===========================================
+   SEARCH PAGE - SANGAI
+   Dark Forest Green Theme
+   =========================================== */
+
+.search-page {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bg-dark);
+    padding-top: 100px;
+    /* Account for navbar */
+}
+
+/* ===========================================
+   SEARCH HERO SECTION
+   =========================================== */
+
+.search-hero {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+    text-align: center;
+}
+
+.search-headline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+}
+
+/* Search Bar */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    max-width: 600px;
+    height: 56px;
+    margin: 0 auto 32px;
+    padding: 0 24px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-medium);
+    border-radius: 28px;
+    transition: all 0.3s ease;
+}
+
+.search-bar-container:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(109, 129, 150, 0.15);
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.search-bar-input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.search-bar-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Filter Chips */
+.filter-chips {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 10px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chip:hover {
+    background: var(--bg-surface);
+    border-color: var(--border-medium);
+}
+
+.chip.active {
+    background: var(--primary);
+    color: #FFFFE3;
+    border-color: var(--primary);
+    font-weight: 600;
+}
+
+/* ===========================================
+   FEATURED SECTION
+   =========================================== */
+
+.featured-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.view-all {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.view-all:hover {
+    color: var(--primary-hover);
+}
+
+/* Featured Grid */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Featured Card */
+.featured-card {
+    position: relative;
+    aspect-ratio: 4/3;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(74, 74, 74, 0.15);
+    transition: all 0.3s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(74, 74, 74, 0.2);
+}
+
+.featured-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+/* Card Badge */
+.card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 6px 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 8px;
+    letter-spacing: 0.02em;
+}
+
+.card-badge.event {
+    background: var(--primary);
+    color: #FFFFE3;
+}
+
+.card-badge.music,
+.card-badge.culture {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.card-badge.place {
+    background: var(--primary);
+    color: #FFFFE3;
+}
+
+.card-badge.adventure,
+.card-badge.wildlife {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+/* Card Content */
+.card-content {
+    color: var(--text-primary);
+}
+
+.card-date {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.card-location {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-description {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* ===========================================
+   SCROLL FOR MORE
+   =========================================== */
+
+.scroll-more {
+    text-align: center;
+    padding: 40px 0 60px;
+    color: var(--text-muted);
+}
+
+.scroll-more span {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.scroll-more-arrow {
+    color: var(--text-muted);
+    animation: bounceDown 2s infinite;
+}
+
+@keyframes bounceDown {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(5px);
+    }
+}

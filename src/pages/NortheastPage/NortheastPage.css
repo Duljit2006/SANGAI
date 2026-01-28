@@ -1,0 +1,241 @@
+/* ===========================================
+   NORTHEAST PAGE & REGION PAGE STYLES
+   =========================================== */
+
+.region-page {
+    min-height: 100vh;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    position: relative;
+}
+
+/* ===========================================
+   FLOATING NAVIGATION - Bottom Center
+   =========================================== */
+
+.floating-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    /* Smooth opacity transition */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.floating-nav.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.floating-nav.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.floating-nav-container {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 227, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(74, 74, 74, 0.15);
+}
+
+.floating-nav-item {
+    padding: 12px 20px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.floating-nav-item:hover {
+    color: var(--text-primary);
+    background: rgba(203, 203, 203, 0.3);
+}
+
+.floating-nav-item.active {
+    color: #FFFFE3;
+    background: var(--primary);
+    font-weight: 600;
+}
+
+/* ===========================================
+   Content Area - No top padding (nav is floating)
+   =========================================== */
+
+.region-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px 120px 40px;
+    /* Extra bottom padding for floating nav */
+}
+
+/* Region Overview */
+.region-overview {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Hero Section */
+.region-hero {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.region-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.region-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(109, 129, 150, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    color: var(--primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.region-badge .material-symbols-outlined {
+    font-size: 1rem;
+}
+
+.region-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin: 0 0 24px 0;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.region-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.region-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+}
+
+.intro-main h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    color: var(--text-primary);
+}
+
+.intro-main .prose {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+}
+
+.intro-main .prose p {
+    margin: 0 0 16px 0;
+}
+
+/* Highlights Card */
+.highlights-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.highlights-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    color: var(--text-primary);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.highlight-item:last-child {
+    border-bottom: none;
+}
+
+.highlight-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(109, 129, 150, 0.1);
+    border-radius: 10px;
+    color: var(--primary);
+}
+
+.highlight-item>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.highlight-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.highlight-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Back to Map Link */
+.back-to-map {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    margin-bottom: 40px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.back-to-map:hover {
+    color: var(--primary);
+    background: rgba(109, 129, 150, 0.1);
+}

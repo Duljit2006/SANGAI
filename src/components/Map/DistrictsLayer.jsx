@@ -58,7 +58,7 @@ export default function DistrictsLayer({ pathGenerator, districts, hidden = fals
                         }}
                         onMouseLeave={() => hideTooltip()}
                         style={{
-                            fill: fillColor,
+                            fill: isSelected ? '#34ab48' : fillColor,
                             stroke: '#000000',
                             strokeWidth: isSelected ? 0.25 : 0.15,
                         }}
