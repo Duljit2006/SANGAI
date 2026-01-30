@@ -12,11 +12,13 @@ import {
     DefiningThemesGrid,
     NarrativeBlock,
     PeopleGallery,
+
     CulturalThreadsScroll,
     ContributionCards,
     ExplorationGrid,
     GatewayGrid
 } from '../../components/RegionalPages';
+import { REGION_AUDIO } from '../../config/audioMapping';
 import './NortheastPage.css';
 
 const HIDE_DELAY = 5000; // 5 seconds before auto-hide
@@ -165,6 +167,7 @@ function NortheastOverview() {
                 tagline={regionData.tagline}
                 subtitle="A land of eight sisters, bound by mountains, rivers, and a tapestry of over 200 tribes. Discover the unexplored paradise."
                 heroImages={HERO_SLIDES} // Use new slides prop
+                audioTrack={REGION_AUDIO['northeast']} // Background Audio
                 badge={{ icon: 'public', text: 'The Hidden Jewel' }}
                 size="large"
             />

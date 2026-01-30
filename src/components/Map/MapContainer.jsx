@@ -64,15 +64,15 @@ export default function MapContainer() {
     const handleExplore = useCallback(() => {
         if (selectedDistrict) {
             // District selected → navigate to /:district
-            navigate(`/${toUrlSlug(selectedDistrict)}`);
+            window.open(`/${toUrlSlug(selectedDistrict)}`, '_blank', 'noopener,noreferrer');
         } else if (selectedState) {
             // State selected → navigate to /:state
-            navigate(`/${toUrlSlug(selectedState)}`);
+            window.open(`/${toUrlSlug(selectedState)}`, '_blank', 'noopener,noreferrer');
         } else {
             // No selection → navigate to /northeast
-            navigate('/northeast');
+            window.open('/northeast', '_blank', 'noopener,noreferrer');
         }
-    }, [navigate, selectedState, selectedDistrict]);
+    }, [selectedState, selectedDistrict]);
 
     // Preprocess GeoJSON to fix winding order
     const statesData = useMemo(() => preprocessGeoJSON(rawStatesData), []);

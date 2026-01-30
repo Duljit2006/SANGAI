@@ -7,6 +7,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Outlet, NavLink, useParams, useLocation } from 'react-router-dom';
 import { getRegionBySlug, getStateBySlug, getDistrictBySlug } from '../../api/apiService';
+import { getAudioForRegion } from '../../config/audioMapping';
 import {
     HeroSection,
     StateGlance,
@@ -231,6 +232,7 @@ function StateOverview({ data, heroSlides }) {
                 title={data.name}
                 tagline={data.tagline}
                 heroImages={heroSlides} // Use slideshow
+                audioTrack={getAudioForRegion(data.slug)} // Audio based on state slug
                 badge={{ icon: 'location_on', text: 'Northeast India' }}
                 size="large"
             />
@@ -307,6 +309,7 @@ function DistrictOverview({ data, heroSlides }) {
                 tagline={data.tagline}
                 subtitle={data.senseOfPlace?.oneLiner}
                 heroImages={heroSlides} // Use slideshow
+                audioTrack={getAudioForRegion(null, data.stateName?.toLowerCase().replace(/ /g, '_'))} // Use parent state audio
                 badge={{ icon: 'place', text: data.stateName }}
                 size="medium" // This will now take full height due to overrides if 'region-full-content' is active
             />
