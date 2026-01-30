@@ -65,37 +65,141 @@ export default function MockDestinationPage() {
                                 Nohkalikai Falls is one of India's tallest plunge and most breathtaking waterfalls, plunging 340 meters into a deep, emerald-green pool. Located near Cherrapunjee, one of the wettest places on Earth, this awe-inspiring natural wonder is fed by rainwater collected on a small plateau, making it a sight to behold throughout the year. The sheer force of the waterfall, combined with the surrounding misty cliffs and lush greenery, creates a mesmerizing spectacle that draws visitors from far and wide. Despite its beauty, Nohkalikai Falls carries a tragic legend, adding an air of mystery to its already captivating presence.
                             </p>
 
-                            {/* Feature Cards */}
-                            <div className="mdp-cards-grid">
-                                {/* Card 1: Location */}
-                                <div className="mdp-card">
-                                    <div className="mdp-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                            {/* Homestay Options */}
+                            <div className="mdp-homestays">
+                                <h2 className="mdp-homestays__title">Where to Stay</h2>
+
+                                {/* Homestay Card 1 */}
+                                <div className="mdp-homestay-card">
+                                    <div className="mdp-homestay-card__image">
+                                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="" />
                                     </div>
-                                    <p className="mdp-card__text">
-                                        Cabs or local transport can be taken from Shillong or Guwahati to Sohra, the nearest major town. From Sohra, it's about a 20-minute drive to the falls.
-                                    </p>
+                                    <div className="mdp-homestay-card__content">
+                                        <div className="mdp-homestay-card__header">
+                                            <h3 className="mdp-homestay-card__name">APRIL SPRINGS HOMESTAY</h3>
+                                            <div className="mdp-homestay-card__rating">
+                                                <span className="rating-text">Good</span>
+                                                <span className="rating-badge">4.3★</span>
+                                            </div>
+                                        </div>
+                                        <div className="mdp-homestay-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                                            <span>UB 23, Upper Nongrim Hills, Opp NEC Building, Shillong</span>
+                                            <span className="reviews">(4 Reviews)</span>
+                                        </div>
+                                        <div className="mdp-homestay-card__price">₹ 3,500.00</div>
+                                        <div className="mdp-homestay-card__details">1 Night, 1 Adult</div>
+                                        <div className="mdp-homestay-card__amenities">
+                                            <span>📶 WiFi</span>
+                                            <span>🍳 Breakfast</span>
+                                            <span>🍽️ Lunch</span>
+                                            <span>🍽️ Dinner</span>
+                                            <span>🅿️ Parking</span>
+                                        </div>
+                                        <button className="mdp-homestay-card__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>
+                                            See Availability
+                                        </button>
+                                    </div>
                                 </div>
 
-                                {/* Card 2: Distance */}
-                                <div className="mdp-card">
-                                    <div className="mdp-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" /><circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" /></svg>
+                                {/* Homestay Card 2 */}
+                                <div className="mdp-homestay-card">
+                                    <div className="mdp-homestay-card__image">
+                                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80" alt="" />
                                     </div>
-                                    <h3 className="mdp-card__title">7.5 Kms</h3>
-                                    <p className="mdp-card__text">
-                                        Nohkalikai Falls is located in the East Khasi Hills District, approximately 7.5 km from Sohra (Cherrapunji).
-                                    </p>
+                                    <div className="mdp-homestay-card__content">
+                                        <div className="mdp-homestay-card__header">
+                                            <h3 className="mdp-homestay-card__name">HILLS & VALLEY GUESTHOUSE</h3>
+                                            <div className="mdp-homestay-card__rating">
+                                                <span className="rating-text">Excellent</span>
+                                                <span className="rating-badge">4.7★</span>
+                                            </div>
+                                        </div>
+                                        <div className="mdp-homestay-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                                            <span>Near Mawkdok View Point, Sohra (Cherrapunji)</span>
+                                            <span className="reviews">(12 Reviews)</span>
+                                        </div>
+                                        <div className="mdp-homestay-card__price">₹ 4,200.00</div>
+                                        <div className="mdp-homestay-card__details">1 Night, 1 Adult</div>
+                                        <div className="mdp-homestay-card__amenities">
+                                            <span>📶 WiFi</span>
+                                            <span>🍳 Breakfast</span>
+                                            <span>🚗 Pick-up</span>
+                                            <span>🅿️ Parking</span>
+                                        </div>
+                                        <button className="mdp-homestay-card__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>
+                                            See Availability
+                                        </button>
+                                    </div>
                                 </div>
 
-                                {/* Card 3: Tips */}
-                                <div className="mdp-card">
-                                    <div className="mdp-card__icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" x2="23" y1="8" y2="11" /><line x1="23" x2="20" y1="8" y2="11" /></svg>
+                                {/* Homestay Card 3 */}
+                                <div className="mdp-homestay-card">
+                                    <div className="mdp-homestay-card__image">
+                                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80" alt="" />
                                     </div>
-                                    <p className="mdp-card__text">
-                                        It is advisable to arrange for a local tourist buddy or guide who is knowledgeable of the location and the language.
-                                    </p>
+                                    <div className="mdp-homestay-card__content">
+                                        <div className="mdp-homestay-card__header">
+                                            <h3 className="mdp-homestay-card__name">CHERRAPUNJI HOLIDAY RESORT</h3>
+                                            <div className="mdp-homestay-card__rating">
+                                                <span className="rating-text">Very Good</span>
+                                                <span className="rating-badge">4.5★</span>
+                                            </div>
+                                        </div>
+                                        <div className="mdp-homestay-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                                            <span>Laitkynsew, Near Seven Sisters Falls, Sohra</span>
+                                            <span className="reviews">(8 Reviews)</span>
+                                        </div>
+                                        <div className="mdp-homestay-card__price">₹ 5,800.00</div>
+                                        <div className="mdp-homestay-card__details">1 Night, 2 Adults</div>
+                                        <div className="mdp-homestay-card__amenities">
+                                            <span>📶 WiFi</span>
+                                            <span>🍳 Breakfast</span>
+                                            <span>🍽️ Dinner</span>
+                                            <span>🌄 View</span>
+                                            <span>🅿️ Parking</span>
+                                        </div>
+                                        <button className="mdp-homestay-card__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>
+                                            See Availability
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Homestay Card 4 */}
+                                <div className="mdp-homestay-card">
+                                    <div className="mdp-homestay-card__image">
+                                        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80" alt="" />
+                                    </div>
+                                    <div className="mdp-homestay-card__content">
+                                        <div className="mdp-homestay-card__header">
+                                            <h3 className="mdp-homestay-card__name">SOHRA PINE COTTAGE</h3>
+                                            <div className="mdp-homestay-card__rating">
+                                                <span className="rating-text">Good</span>
+                                                <span className="rating-badge">4.1★</span>
+                                            </div>
+                                        </div>
+                                        <div className="mdp-homestay-card__location">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg>
+                                            <span>Main Road, Cherrapunji Market Area, Sohra</span>
+                                            <span className="reviews">(6 Reviews)</span>
+                                        </div>
+                                        <div className="mdp-homestay-card__price">₹ 2,800.00</div>
+                                        <div className="mdp-homestay-card__details">1 Night, 1 Adult</div>
+                                        <div className="mdp-homestay-card__amenities">
+                                            <span>📶 WiFi</span>
+                                            <span>🍳 Breakfast</span>
+                                            <span>🅿️ Parking</span>
+                                        </div>
+                                        <button className="mdp-homestay-card__btn">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v8" /><path d="M8 12h8" /></svg>
+                                            See Availability
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
