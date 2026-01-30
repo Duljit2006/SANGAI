@@ -10,6 +10,7 @@ import { getRegionBySlug, getStateBySlug, getDistrictBySlug } from '../../api/ap
 import { getAudioForRegion } from '../../config/audioMapping';
 import {
     HeroSection,
+    DescriptionSection,
     StateGlance,
     NarrativeBlock,
     CulturalThreadsScroll,
@@ -237,6 +238,13 @@ function StateOverview({ data, heroSlides }) {
                 size="large"
             />
 
+            {/* Description Section */}
+            <DescriptionSection
+                title={`Welcome to ${data.name}`}
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                images={heroSlides}
+            />
+
             {/* Section 2: At a Glance */}
             {data.glance && (
                 <StateGlance glance={data.glance} />
@@ -312,6 +320,13 @@ function DistrictOverview({ data, heroSlides }) {
                 audioTrack={getAudioForRegion(null, data.stateName?.toLowerCase().replace(/ /g, '_'))} // Use parent state audio
                 badge={{ icon: 'place', text: data.stateName }}
                 size="medium" // This will now take full height due to overrides if 'region-full-content' is active
+            />
+
+            {/* Description Section */}
+            <DescriptionSection
+                title={`Welcome to ${data.districtName}`}
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                images={heroSlides}
             />
 
             {/* Section 2: Context */}

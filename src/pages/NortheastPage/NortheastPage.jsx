@@ -9,6 +9,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { getRegionBySlug } from '../../api/apiService';
 import {
     HeroSection,
+    DescriptionSection,
     DefiningThemesGrid,
     NarrativeBlock,
     PeopleGallery,
@@ -170,6 +171,13 @@ function NortheastOverview() {
                 audioTrack={REGION_AUDIO['northeast']} // Background Audio
                 badge={{ icon: 'public', text: 'The Hidden Jewel' }}
                 size="large"
+            />
+
+            {/* Section 1.5: Description Split */}
+            <DescriptionSection
+                title="Welcome to Northeast India"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                images={HERO_SLIDES}
             />
 
             {/* Section 2: Defining Themes */}
