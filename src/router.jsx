@@ -6,7 +6,7 @@ import IntroPage from './pages/IntroPage/IntroPage';
 import ExplorePage from './pages/ExplorePage/ExplorePage';
 import SearchPage from './pages/SearchPage/SearchPage';
 import DestinationPage from './pages/DestinationPage/DestinationPage';
-import DestinationDetailsPage from './pages/DestinationDetailsPage/DestinationDetailsPage';
+import MockDestinationPage from './pages/DestinationDetailsPage/MockDestinationPage';
 import NortheastPage from './pages/NortheastPage/NortheastPage';
 import RegionPage from './pages/RegionPage/RegionPage';
 
@@ -51,10 +51,6 @@ export const router = createBrowserRouter([
                 path: 'destination/:id',
                 element: <DestinationPage />,
             },
-            {
-                path: ':regionSlug/destination/:id',
-                element: <DestinationDetailsPage />,
-            },
 
             // Northeast Region Page
             {
@@ -97,5 +93,9 @@ export const router = createBrowserRouter([
                 ],
             },
         ],
+    },
+    {
+        path: '/mock-destination/:id',
+        element: <MockDestinationPage />,
     },
 ]);

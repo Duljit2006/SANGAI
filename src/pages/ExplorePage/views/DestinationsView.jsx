@@ -130,10 +130,7 @@ export default function DestinationsView() {
                                                 <span className="category-label">{place.type}</span>
                                                 <button
                                                     className="btn-sm"
-                                                    onClick={() => {
-                                                        const regionSlug = place.location.toLowerCase().replace(/\s+/g, '-') || 'northeast';
-                                                        navigate(`/${regionSlug}/destination/${place.id}`);
-                                                    }}
+                                                    onClick={() => navigate(`/mock-destination/${place.id}`)}
                                                 >
                                                     Learn More
                                                 </button>
