@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { getPlaces } from '../../../api/apiService';
 import './DestinationsView.css';
 
@@ -8,7 +7,6 @@ import './DestinationsView.css';
  * Displays refined destination cards - Now using real API data
  */
 export default function DestinationsView() {
-    const navigate = useNavigate();
     const [filter, setFilter] = useState('all');
     const [places, setPlaces] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -128,15 +126,7 @@ export default function DestinationsView() {
                                             </div>
                                             <div className="card-action-row">
                                                 <span className="category-label">{place.type}</span>
-                                                <button
-                                                    className="btn-sm"
-                                                    onClick={() => {
-                                                        const regionSlug = place.location.toLowerCase().replace(/\s+/g, '-') || 'northeast';
-                                                        navigate(`/${regionSlug}/destination/${place.id}`);
-                                                    }}
-                                                >
-                                                    Learn More
-                                                </button>
+                                                <button className="btn-sm">Learn More</button>
                                             </div>
                                         </div>
                                     </div>
