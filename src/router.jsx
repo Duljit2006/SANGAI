@@ -9,7 +9,9 @@ import DestinationPage from './pages/DestinationPage/DestinationPage';
 import MockDestinationPage from './pages/DestinationDetailsPage/MockDestinationPage';
 import NortheastPage from './pages/NortheastPage/NortheastPage';
 import RegionPage from './pages/RegionPage/RegionPage';
-
+import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
+import CollectionPage from './pages/CollectionPage/CollectionPage';
+import ProductPage from './pages/ProductPage/ProductPage';
 // Views (reused across pages)
 import DestinationsView from './pages/ExplorePage/views/DestinationsView';
 import EssentialsView from './pages/ExplorePage/views/EssentialsView';
@@ -97,8 +99,40 @@ export const router = createBrowserRouter([
                         path: 'festivals',
                         element: <FestivalsView />,
                     },
+                    // Shopping View under specific region
+                    {
+                        path: 'shopping',
+                        element: <ShoppingPage />,
+                    }
                 ],
             },
+
+            // Global Shopping Page
+            {
+                path: 'shopping',
+                element: <ShoppingPage />,
+            },
+            {
+                path: 'shopping/collection/:category',
+                element: <CollectionPage />,
+            },
+            {
+                path: 'collections/:category',
+                element: <CollectionPage />,
+            },
+            {
+                path: 'shopping/:category/:productSlug',
+                element: <ProductPage />,
+            },
+            {
+                path: 'collections/:category/:productSlug',
+                element: <ProductPage />,
+            },
+            {
+                path: 'collections/:category/products/:productSlug',
+                element: <ProductPage />,
+            },
+
         ],
     },
 ]);

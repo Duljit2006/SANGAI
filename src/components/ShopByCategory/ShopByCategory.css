@@ -1,0 +1,148 @@
+.shop-by-category {
+    padding: 4rem 2rem;
+    background-color: var(--color-background);
+    overflow: hidden;
+}
+
+.shop-category-header {
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.shop-category-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    margin: 0;
+}
+
+.shop-category-slider {
+    display: flex;
+    flex-wrap: wrap;
+    /* Changed to wrap for the grid look in the second image, or keep scroll if preferred. User asked for "similar to this" which is a grid in the second image. */
+    justify-content: center;
+    gap: 3rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* If user strictly wanted the slider behavior but circular, we can revert flex-wrap. 
+   But the image shows a grid. flexible grid is safer for "Shop By Category" usually. 
+   Let's stick to the previous slider behavior but make it look like the image (circular).
+   Actually, the image provided is a static grid. I will support a responsive grid that can wrap.
+*/
+
+.shop-category-card-wrapper {
+    flex: 0 0 calc(20% - 2.4rem);
+    /* 5 columns grid roughly */
+    min-width: 160px;
+    max-width: 220px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.shop-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+.shop-category-image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    /* 1:1 Aspect Ratio (Square) */
+    overflow: hidden;
+    border-radius: 50%;
+    /* Circle */
+    background: white;
+    border: 4px solid transparent;
+    /* Placeholder for border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alternating border colors logic using nth-child on the wrapper or hardcoded styles? 
+   CSS nth-child is easiest. 
+   Gold: #e2c079 (approx from image)
+   Teal: #a8dcd6 (approx from image)
+*/
+.shop-category-card-wrapper:nth-child(odd) .shop-category-image-container {
+    border-color: #e2c079;
+}
+
+.shop-category-card-wrapper:nth-child(even) .shop-category-image-container {
+    border-color: #a8dcd6;
+}
+
+.shop-category-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    padding: 5px;
+    /* slight gap between border and image if needed, else remove */
+    border-radius: 50%;
+}
+
+.shop-category-card:hover .shop-category-image-container {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.shop-category-card:hover .shop-category-image {
+    transform: scale(1.1);
+}
+
+.shop-category-content {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.shop-category-name {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+/* Arrow removal - reference image doesn't strictly emphasize arrows next to text */
+.icon-arrow-right {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .shop-category-card-wrapper {
+        flex: 0 0 calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .shop-category-slider {
+        /* Revert to horizontal scroll for mobile if grid is too cramped? 
+       Or 2 column grid. 2 column grid is usually nice for circles. */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .shop-category-card-wrapper {
+        flex: unset;
+        min-width: unset;
+        max-width: unset;
+        width: 100%;
+    }
+}

@@ -185,6 +185,24 @@ export async function getTags() {
     return result.data;
 }
 
+// ============ Products API ============
+
+export async function getProducts(params = {}) {
+    const queryString = new URLSearchParams(params).toString();
+    const result = await fetchAPI(`/products${queryString ? `?${queryString}` : ''}`);
+    return result; // API returns array directly
+}
+
+export async function getProductBySlug(slug) {
+    const result = await fetchAPI(`/products/${slug}`);
+    return result; // API returns item directly
+}
+
+export async function getProductsByCategory(category) {
+    const result = await fetchAPI(`/products/category/${category}`);
+    return result; // API returns array directly
+}
+
 // ============ Health Check ============
 
 export async function healthCheck() {
@@ -227,6 +245,10 @@ export default {
     getFestivalsByMonth,
     // Search
     searchAll,
+    // Products
+    getProducts,
+    getProductBySlug,
+    getProductsByCategory,
     // Tags
     getTags,
     // Health

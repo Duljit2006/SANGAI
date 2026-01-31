@@ -1,0 +1,47 @@
+.shopping-page {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    padding-top: 0;
+    /* Account for fixed navbar if applicable */
+}
+
+.shopping-hero {
+    background-color: var(--color-surface);
+    padding: 6rem 2rem;
+    /* Increased padding for better visibility of bg */
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    /* Assuming dark image, usually safer for hero images */
+    position: relative;
+    /* Overlay for readability if needed, but starting clean */
+}
+
+/* Ensure text is readable on potentially busy background */
+.shopping-hero-title,
+.shopping-hero-subtitle {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.shopping-hero-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.shopping-hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .shopping-hero-title {
+        font-size: 2rem;
+    }
+}

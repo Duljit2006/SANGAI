@@ -7,6 +7,7 @@ import homestaysRouter from './homestays.js';
 import guidesRouter from './guides.js';
 import festivalsRouter from './festivals.js';
 import searchRouter from './search.js';
+import productRoutes from './productRoutes.js';
 import { Tag } from '../models/index.js';
 
 const router = Router();
@@ -20,6 +21,7 @@ router.use('/homestays', homestaysRouter);
 router.use('/guides', guidesRouter);
 router.use('/festivals', festivalsRouter);
 router.use('/search', searchRouter);
+router.use('/products', productRoutes);
 
 // Tags endpoint
 router.get('/tags', async (req, res, next) => {

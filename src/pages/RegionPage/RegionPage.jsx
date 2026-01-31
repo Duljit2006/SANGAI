@@ -111,6 +111,9 @@ export default function RegionPage() {
                     <NavLink to={`/${region}/festivals`} className={({ isActive }) => `floating-nav-item ${isActive ? 'active' : ''}`}>
                         Festivals
                     </NavLink>
+                    <NavLink to={`/${region}/shopping`} className={({ isActive }) => `floating-nav-item ${isActive ? 'active' : ''}`}>
+                        Shopping
+                    </NavLink>
                 </div>
             </nav>
 

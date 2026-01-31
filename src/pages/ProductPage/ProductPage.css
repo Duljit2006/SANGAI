@@ -1,0 +1,323 @@
+.product-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    padding-bottom: 5rem;
+    padding-top: 100px;
+}
+
+.product-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Main Section */
+.product-main-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+    /* Added margin to replace breadcrumbs */
+}
+
+@media (min-width: 992px) {
+    .product-main-section {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+}
+
+/* Gallery */
+.product-gallery .main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background-color: #f9f9f9;
+}
+
+.product-gallery .thumbnails {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+
+.product-gallery .thumb {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.product-gallery .thumb.active {
+    border-color: #000;
+}
+
+.product-gallery .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Info */
+.product-info h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-price {
+    font-weight: 500;
+}
+
+.compare-at-price {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
+.sale-badge {
+    background: #e0e0e0;
+    color: #333;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    border-radius: 2px;
+}
+
+/* Variants */
+.product-variants {
+    margin-bottom: 2rem;
+}
+
+.variant-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.variant-options {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.variant-btn {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 40px;
+    /* Pill shape */
+    transition: all 0.2s;
+}
+
+.variant-btn.selected {
+    border-color: #000;
+    background-color: #f9f9f9;
+}
+
+.variant-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f5f5f5;
+    text-decoration: line-through;
+}
+
+/* Actions */
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    /* Matches HTML pill style somewhat */
+    width: 120px;
+    justify-content: space-between;
+}
+
+.quantity-selector button {
+    background: none;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.quantity-selector .qty-value {
+    width: 30px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    flex: 1;
+    background-color: #367560;
+    /* Brand green */
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #2b5e4d;
+}
+
+/* Accordions */
+.product-accordions {
+    border-top: 1px solid #eee;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-right: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.accordion-content .show {
+    max-height: 500px;
+    /* Arbitrary large value or use JS ref height */
+    padding-bottom: 1.2rem;
+}
+
+/* For now, simplified toggle logic in JSX adds 'show' class which handles display or height */
+.accordion-content {
+    display: none;
+    padding-bottom: 1.5rem;
+}
+
+.accordion-content.show {
+    display: block;
+}
+
+
+/* Story Section */
+.product-story-section {
+    background: #f9f9f9;
+    padding: 4rem 0;
+    margin-top: 4rem;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+@media (min-width: 992px) {
+    .story-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.story-text {
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.story-logo {
+    max-height: 50px;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Related */
+.related-products-section {
+    margin-top: 4rem;
+}
+
+.related-products-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* Or left based on design */
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .related-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.related-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-card .img-wrapper {
+    background: #f5f5f5;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.related-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.related-card:hover img {
+    transform: scale(1.05);
+}
+
+.related-card h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.related-card p {
+    font-size: 0.9rem;
+    color: #666;
+}

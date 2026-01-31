@@ -1,0 +1,331 @@
+.collection-page {
+    /* Ensure page fills viewport */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Section */
+.collection-hero {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.collection-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+
+.collection-hero-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+}
+
+.collection-hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+    letter-spacing: 0.02em;
+}
+
+.banner-tags {
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Layout Container */
+.collection-container {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 3rem 4rem;
+    /* Wide padding for desktop */
+    gap: 4rem;
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .collection-container {
+        padding: 2rem;
+        gap: 2rem;
+        flex-direction: column;
+    }
+}
+
+/* Sidebar */
+.collection-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filter-group h3 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    color: #121212;
+}
+
+.filter-section {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1.5rem;
+}
+
+.filter-section:last-child {
+    border-bottom: none;
+}
+
+/* Details/Summary for Collapsible Filters */
+.filter-section details summary {
+    list-style: none;
+    /* Hide default arrow */
+    cursor: pointer;
+}
+
+.filter-section details summary::-webkit-details-marker {
+    display: none;
+}
+
+.filter-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-section h4 svg {
+    transition: transform 0.2s;
+}
+
+.filter-section details[open] summary h4 svg {
+    transform: rotate(180deg);
+}
+
+.price-range-inputs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.price-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.price-input span {
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.price-input input {
+    width: 100%;
+    padding: 8px 8px 8px 24px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    /* Square inputs */
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.price-input label {
+    font-size: 0.75rem;
+    color: #666;
+    margin-top: 6px;
+}
+
+/* Custom Checkbox */
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #444;
+    user-select: none;
+    position: relative;
+    padding-left: 28px;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.checkbox-label:hover input~.checkmark {
+    border-color: #666;
+}
+
+.checkbox-label input:checked~.checkmark {
+    background-color: #fff;
+    border-color: #121212;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-label input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-label .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #121212;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+
+/* Main Content */
+.collection-main {
+    flex: 1;
+}
+
+.collection-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    /* border-bottom: 1px solid #eee; Optional */
+}
+
+.product-count {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.sort-selector {
+    display: flex;
+    align-items: center;
+}
+
+.sort-selector label {
+    margin-right: 0.8rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.sort-selector select {
+    padding: 8px 24px 8px 8px;
+    border: none;
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Mobile: 2 cols */
+    gap: 1.5rem;
+    row-gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Tablet: 3 cols */
+    }
+}
+
+@media (min-width: 1400px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* Desktop: 4 cols */
+    }
+}
+
+/* Video Hero Styles */
+.collection-hero-video {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    /* Consistent height with image hero */
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Ensure overlay stays on top of video */
+.collection-hero-video .collection-hero-overlay {
+    z-index: 2;
+}
+
+.collection-hero-video .collection-hero-content {
+    z-index: 3;
+}
