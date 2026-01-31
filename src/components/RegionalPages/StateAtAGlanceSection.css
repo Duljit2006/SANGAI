@@ -9,7 +9,7 @@
     justify-content: center;
     position: relative;
     padding: 60px 40px;
-    margin-top: -60px;
+    margin-top: 0;
     /* Counteract parent flex gap */
 }
 

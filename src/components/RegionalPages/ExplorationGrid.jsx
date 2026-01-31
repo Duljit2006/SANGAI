@@ -2,7 +2,7 @@
  * ExplorationGrid - Soft tourism category cards
  * Section 7 for Region pages (Ways to Explore)
  */
-import './RegionalPages.css';
+import './ExplorationGrid.css';
 
 export default function ExplorationGrid({
     categories = [],

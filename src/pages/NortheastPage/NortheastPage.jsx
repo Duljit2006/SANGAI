@@ -29,6 +29,8 @@ const HIDE_DELAY = 3000; // 3 seconds before auto-hide
 export default function NortheastPage() {
     const location = useLocation();
     const isRootPath = location.pathname === '/northeast';
+    const isSubPageFullWidth = ['/destinations', '/festivals', '/essentials'].some(path => location.pathname.includes(path));
+    const useFullWidth = isRootPath || isSubPageFullWidth;
 
     // Floating nav visibility state
     const [isNavVisible, setIsNavVisible] = useState(true);
@@ -99,7 +101,7 @@ export default function NortheastPage() {
             </nav>
 
             {/* Content Area */}
-            <main className={`region-content ${isRootPath ? 'northeast-content' : ''}`}>
+            <main className={`region-content ${useFullWidth ? 'northeast-content' : ''}`}>
                 {isRootPath ? (
                     <NortheastOverview />
                 ) : (

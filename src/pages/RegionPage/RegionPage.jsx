@@ -43,6 +43,8 @@ export default function RegionPage() {
 
     // Check if we're at the root region path (no subpage)
     const isRootPath = location.pathname === `/${region}`;
+    const isSubPageFullWidth = ['/destinations', '/festivals', '/essentials'].some(path => location.pathname.includes(path));
+    const useFullWidth = isRootPath || isSubPageFullWidth;
 
     // Floating nav visibility state
     const [isNavVisible, setIsNavVisible] = useState(true);
@@ -113,7 +115,7 @@ export default function RegionPage() {
             </nav>
 
             {/* Content Area */}
-            <main className={`region-content ${isRootPath ? 'region-full-content' : ''}`}>
+            <main className={`region-content ${useFullWidth ? 'region-full-content' : ''}`}>
                 {isRootPath ? (
                     <RegionOverview regionSlug={region} displayName={displayName} />
                 ) : (

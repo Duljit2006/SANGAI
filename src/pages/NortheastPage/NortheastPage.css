@@ -109,8 +109,8 @@
 }
 
 /* Constrain other sections back to center */
-.northeast-content .region-overview>*:not(.hero-section):not(.description-section):not(.defining-themes-section):not(.shopping-section):not(.glance-section-redesigned),
-.region-full-content .region-overview>*:not(.hero-section):not(.description-section):not(.defining-themes-section):not(.shopping-section):not(.glance-section-redesigned) {
+.northeast-content .region-overview>*:not(.hero-section):not(.description-section):not(.defining-themes-section):not(.shopping-section):not(.glance-section-redesigned):not(.gateway-section):not(.cultural-threads-section):not(.narrative-section):not(.contributions-section):not(.exploration-section),
+.region-full-content .region-overview>*:not(.hero-section):not(.description-section):not(.defining-themes-section):not(.shopping-section):not(.glance-section-redesigned):not(.gateway-section):not(.cultural-threads-section):not(.narrative-section):not(.contributions-section):not(.exploration-section) {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -128,7 +128,23 @@
 .region-overview {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Ensure no background bleed through */
+    background: var(--bg-dark);
+}
+
+/* Enforce strict strict stacking for all direct children sections */
+.region-overview>section,
+.region-overview>div {
+    /* Some sections might be wrapped in divs */
+    margin: 0;
+    width: 100%;
+    /* Ensure relative positioning for z-index context if needed */
+    position: relative;
+    /* display: block; REMOVED to allow flex sections to handle their own layout */
 }
 
 /* Hero Section */

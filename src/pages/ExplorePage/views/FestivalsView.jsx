@@ -63,10 +63,7 @@ export default function FestivalsView() {
 
     return (
         <div className="festivals-view">
-            {/* VIEW BREADCRUMBS */}
-            <div className="breadcrumbs">
-                <span>Home</span> / <span>Northeast India</span> / <span className="current">Manipur Festivals</span>
-            </div>
+
 
             {/* HEADER */}
             <div className="fest-header">

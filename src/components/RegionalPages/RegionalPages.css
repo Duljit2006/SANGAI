@@ -285,35 +285,75 @@
 /* ===========================================
    NARRATIVE SECTION
    =========================================== */
+/* ===========================================
+   NARRATIVE SECTION
+   =========================================== */
 .narrative-section {
-    padding: 80px 0;
-    max-width: 800px;
-    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px;
+    /* Background Image */
+    background-image: url('../../assets/background/image.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Parallax effect */
+    color: #ffffff;
+    box-sizing: border-box;
 }
 
-.narrative-section.narrative-center {
+.narrative-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Dark gradient overlay for readability */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(20, 20, 20, 0.7) 100%);
+    z-index: 0;
+}
+
+.narrative-section .section-title {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 
 .narrative-content {
-    margin-top: 24px;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin-top: 0;
+    text-align: center;
 }
 
 .narrative-paragraph {
-    font-size: 1.15rem;
-    color: var(--text-muted);
-    line-height: 1.9;
-    margin: 0 0 24px 0;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 2;
+    margin: 0 0 2rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
 }
 
-.narrative-section.narrative-philosophical .narrative-paragraph::first-letter {
-    font-size: 3rem;
+/* Only apply drop cap to the VERY FIRST paragraph of the section */
+.narrative-section.narrative-philosophical .narrative-paragraph:first-child::first-letter {
+    font-size: 5rem;
     font-weight: 700;
     color: var(--primary);
+    /* Orange accent */
     float: left;
-    line-height: 1;
-    margin-right: 12px;
+    line-height: 0.8;
+    margin-right: 16px;
     margin-top: 4px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* ===========================================
@@ -370,7 +410,42 @@
    CULTURAL THREADS
    =========================================== */
 .cultural-threads-section {
-    padding: 60px 0;
+    width: 100%;
+    height: 100vh;
+    /* Use the identified background image */
+    background-image: url('../../assets/background/culture.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    /* Ensure no overlap with previous section */
+    margin-top: 0;
+}
+
+/* Add an overlay to create opacity effect on background */
+.cultural-threads-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* White overlay to decrease bg opacity/visibility 'a little' */
+    /* Adjust these values as needed. If user wants "decrease opacity of bg", 
+       it usually means make it more faint, so a semi-transparent overlay of the background color (cream/white) helps. */
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content sits above the overlay */
+.threads-header,
+.threads-scroller {
+    position: relative;
+    z-index: 1;
 }
 
 .threads-header {
@@ -378,6 +453,23 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 32px;
+    padding: 0 4rem;
+    /* Align with Gateway section */
+    max-width: 1400px;
+    /* Prevent it from being too wide on huge screens */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Target the section title specifically within the header if needed, or global section-title */
+.cultural-threads-section .section-title {
+    font-size: 3rem;
+    /* Making text big as requested */
+    color: #333;
+    /* Dark because background is light cream/beige */
+    margin-bottom: 0;
 }
 
 .scroll-controls {
@@ -389,29 +481,36 @@
     width: 44px;
     height: 44px;
     border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    background: var(--bg-surface);
-    color: var(--text-muted);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    /* Better visibility on bg */
+    color: var(--text-primary);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
 }
 
 .scroll-btn:hover {
     border-color: var(--primary);
     color: var(--primary);
+    background: white;
 }
 
 .threads-scroller {
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    /* More breathing room between cards */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    padding-bottom: 16px;
+    padding: 0 4rem 2rem 4rem;
+    /* Align, and add bottom padding */
+    align-items: center;
+    height: 100%;
 }
 
 .threads-scroller::-webkit-scrollbar {
@@ -419,12 +518,43 @@
 }
 
 .thread-card {
-    flex: 0 0 320px;
-    height: 400px;
+    flex: 0 0 400px;
+    /* Slightly narrower for elegance */
+    height: 85%;
+    /* Reduced from 95% to give breathing room */
     border-radius: 20px;
     overflow: hidden;
     position: relative;
     scroll-snap-align: start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    /* Make text color white inside cards */
+}
+
+/* Ensure specific text elements inside are white */
+.thread-title,
+.thread-insight {
+    color: #ffffff !important;
+    position: relative;
+    z-index: 3;
+    /* Ensure it is above the overlay */
+}
+
+.thread-insight {
+    margin-top: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.thread-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .thread-image {

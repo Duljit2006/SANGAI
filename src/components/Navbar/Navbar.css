@@ -12,6 +12,7 @@
     background: transparent;
     border-bottom: none;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .navbar-container {

@@ -1,0 +1,156 @@
+.gateway-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Use the identified background image */
+    background-image: url('../../assets/background/image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Add top padding to clear the 80-100px navbar */
+    padding: 120px 0 2rem 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Prevent page scroll issues */
+    position: relative;
+    /* For overlay if needed */
+}
+
+/* Optional: Add an overlay to ensure text readability if the image is busy */
+.gateway-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Subtle black overlay */
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Ensure content sits above the overlay */
+.gateway-header,
+.gateway-scroll-container {
+    position: relative;
+    z-index: 1;
+}
+
+.gateway-header {
+    text-align: left;
+    padding: 0 4rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+}
+
+.gateway-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.gateway-description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.gateway-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 0 4rem 2rem 4rem;
+    /* Right padding for scroll end */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+    flex-grow: 1;
+    align-items: center;
+    /* Center cards vertically in the scroll area */
+}
+
+.gateway-scroll-container::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
+}
+
+.gateway-card {
+    position: relative;
+    min-width: 300px;
+    width: 25vw;
+    height: 80%;
+    /* Takes up most of the scroll container height */
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gateway-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.gateway-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.gateway-card:hover .gateway-image {
+    transform: scale(1.1);
+}
+
+.gateway-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+}
+
+.gateway-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.gateway-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gateway-tagline {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.gateway-meta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #f26522;
+    /* Accent color */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+}

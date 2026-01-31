@@ -8,26 +8,7 @@
     color: var(--text-primary);
 }
 
-/* BREADCRUMBS */
-.breadcrumbs {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 24px;
-}
 
-.breadcrumbs span {
-    cursor: pointer;
-    transition: color 0.2s;
-}
-
-.breadcrumbs span:not(.current):hover {
-    color: var(--text-primary);
-}
-
-.breadcrumbs .current {
-    color: var(--text-primary);
-    cursor: default;
-}
 
 /* HEADER */
 .fest-header {

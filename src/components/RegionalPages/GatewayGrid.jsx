@@ -1,14 +1,15 @@
 /**
- * GatewayGrid - Navigation grid to child entities
+ * GatewayGrid - Navigation grid to child entities (Redesigned)
  * Section 8 for Region pages (Gateway to States)
- * Also used for states (Explore Districts)
+ * Horizontal scrolling 100vh section
  */
 import { Link } from 'react-router-dom';
-import './RegionalPages.css';
+import './GatewayGrid.css'; // Import specific new styles
 
 export default function GatewayGrid({
     items = [],
-    title = "Explore Further",
+    title = "Explore the Eight Sisters",
+    description = "Journey through the diverse landscapes and cultures of the eight northeastern states, each offering a unique tapestry of experiences, from mist-covered hills to vibrant festivals.",
     basePath = '/',
     entityType = 'state' // 'state' | 'district'
 }) {
@@ -16,9 +17,12 @@ export default function GatewayGrid({
 
     return (
         <section className="gateway-section">
-            <h2 className="section-title">{title}</h2>
+            <div className="gateway-header">
+                <h2 className="gateway-title">{title}</h2>
+                <p className="gateway-description">{description}</p>
+            </div>
 
-            <div className="gateway-grid">
+            <div className="gateway-scroll-container">
                 {items.map((item, index) => (
                     <Link
                         to={`${basePath}${item.slug}`}

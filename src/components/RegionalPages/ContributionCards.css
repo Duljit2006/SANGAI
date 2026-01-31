@@ -1,0 +1,157 @@
+/* ===========================================
+   CONTRIBUTION CARDS SECTION
+   =========================================== */
+.contributions-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 4rem;
+    box-sizing: border-box;
+    /* Reuse image.png but with a distinct overlay */
+    background-image: url('../../assets/background/image copy.png');
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    color: #ffffff;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.contributions-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Neutral dark overlay for readability, removed green tint */
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.contributions-section .section-title {
+    position: relative;
+    z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contributions-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.contribution-card {
+    background: #fff;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    height: 100%;
+    min-height: 500px;
+    /* Force a taller card */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contribution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 280px;
+    /* Increased image height */
+    position: relative;
+    overflow: visible;
+    margin-bottom: 40px;
+    /* Space for the half-icon overlapping */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-icon-circle {
+    position: absolute;
+    bottom: -40px;
+    /* Adjusted for larger icon/position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    /* Slightly larger icon */
+    height: 80px;
+    background-color: #f26522;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.card-icon-circle .material-symbols-outlined {
+    font-size: 2.2rem;
+}
+
+.contribution-card-content {
+    flex: 1;
+    padding: 1px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contribution-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f26522;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.contribution-card-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contributions-section {
+        padding: 60px 20px;
+    }
+
+    .contributions-section .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-image-container {
+        height: 200px;
+    }
+}
