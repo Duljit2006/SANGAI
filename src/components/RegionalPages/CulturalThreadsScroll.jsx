@@ -3,6 +3,7 @@
  * Section 5 for Region pages (Cultural Threads)
  */
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './RegionalPages.css';
 
 export default function CulturalThreadsScroll({
@@ -46,20 +47,34 @@ export default function CulturalThreadsScroll({
             </div>
 
             <div className="threads-scroller" ref={scrollRef}>
-                {threads.map((thread, index) => (
-                    <div className="thread-card" key={index}>
-                        <div
-                            className="thread-image"
-                            style={{ backgroundImage: `url(${thread.imageUrl})` }}
+                {threads.map((thread, index) => {
+                    // Map titles to section IDs for deep linking
+                    let hash = '';
+                    if (thread.title.includes('Festival')) hash = 'festivals';
+                    else if (thread.title.includes('Music')) hash = 'music';
+                    else if (thread.title.includes('Woven') || thread.title.includes('Attire')) hash = 'attire';
+                    else if (thread.title.includes('Food')) hash = 'food';
+                    else if (thread.title.includes('Wild')) hash = 'wildlife';
+
+                    return (
+                        <Link
+                            to={`culture/${hash}`}
+                            className="thread-card block transition-transform hover:scale-[1.02]"
+                            key={index}
                         >
-                            <div className="thread-overlay"></div>
-                        </div>
-                        <div className="thread-content">
-                            <h3 className="thread-title">{thread.title}</h3>
-                            <p className="thread-insight">{thread.insight}</p>
-                        </div>
-                    </div>
-                ))}
+                            <div
+                                className="thread-image"
+                                style={{ backgroundImage: `url(${thread.imageUrl})` }}
+                            >
+                                <div className="thread-overlay"></div>
+                            </div>
+                            <div className="thread-content">
+                                <h3 className="thread-title">{thread.title}</h3>
+                                <p className="thread-insight">{thread.insight}</p>
+                            </div>
+                        </Link>
+                    );
+                })}
             </div>
         </section>
     );

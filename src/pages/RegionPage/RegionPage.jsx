@@ -271,17 +271,37 @@ function StateOverview({ data, heroSlides }) {
                 />
             )}
 
-            {/* Section 5: Cultural Life (Festivals as horizontal cards) */}
-            {data.culturalLife?.festivals?.length > 0 && (
-                <CulturalThreadsScroll
-                    threads={data.culturalLife.festivals.map(f => ({
-                        title: f.name,
-                        insight: f.meaning,
-                        imageUrl: null
-                    }))}
-                    title="Cultural Celebrations"
-                />
-            )}
+            {/* Section 5: Cultural Threads (Same as /northeast) */}
+            <CulturalThreadsScroll
+                threads={[
+                    {
+                        title: 'Festival Rhythms',
+                        insight: 'From Hornbill to Bihu, festivals here are not celebrations but the heartbeat of communities',
+                        imageUrl: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=1000'
+                    },
+                    {
+                        title: 'Music as Memory',
+                        insight: 'Every song carries a story, every dance a prayer—music is how history travels through time',
+                        imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=1000'
+                    },
+                    {
+                        title: 'Woven Stories',
+                        insight: 'In the patterns of shawls and fabrics, you can read the identity of entire communities',
+                        imageUrl: 'https://images.unsplash.com/photo-1558171813-4c088753af8f?auto=format&fit=crop&q=80&w=1000'
+                    },
+                    {
+                        title: 'Food as Climate',
+                        insight: 'Fermented, smoked, dried—preservation techniques tell of monsoons and winters endured',
+                        imageUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=1000'
+                    },
+                    {
+                        title: 'Wild Sanctuaries',
+                        insight: 'Home to rare species and vast forests, nature here is not just a resource but a living deity',
+                        imageUrl: 'https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&q=80&w=1000'
+                    }
+                ]}
+                title="Cultural Threads That Bind"
+            />
 
             {/* Section 6: Contributions */}
             {data.contributions?.length > 0 && (
@@ -342,6 +362,35 @@ function DistrictOverview({ data, heroSlides }) {
 
             <DefiningThemesSection />
 
+            {/* At a Glance Section */}
+            <StateAtAGlanceSection
+                glance={{
+                    capital: data.districtName,
+                    landscapeType: data.context?.geographicNote?.slice(0, 50) || 'Hilly Terrain',
+                    languages: ['Local Dialects', 'English'],
+                    population: data.population || 'N/A',
+                    area: data.area || 'N/A'
+                }}
+                stateName={data.stateName}
+                coordinates={data.location ? { lat: data.location.lat, lng: data.location.lng } : null}
+                locationName={data.districtName}
+            />
+
+            <ShoppingSection
+                title={`Buy A Piece of ${data.districtName}`}
+                subtitle="Unique, Eco Friendly, Natural Products"
+            />
+
+            {/* Land & Memory Section */}
+            <NarrativeBlock
+                paragraphs={[
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                ]}
+                title="Land & Memory"
+                tone="philosophical"
+                align="center"
+            />
+
             {/* Section 2: Context */}
             {data.context?.geographicNote && (
                 <NarrativeBlock
@@ -368,6 +417,8 @@ function DistrictOverview({ data, heroSlides }) {
             {data.voicesAndStories && (
                 <VoicesSection voices={data.voicesAndStories} />
             )}
+
+
 
             {/* Section 8: Nearby Districts */}
             {data.nearbyDistricts?.length > 0 && (

@@ -9,6 +9,8 @@ import DestinationPage from './pages/DestinationPage/DestinationPage';
 import MockDestinationPage from './pages/DestinationDetailsPage/MockDestinationPage';
 import NortheastPage from './pages/NortheastPage/NortheastPage';
 import RegionPage from './pages/RegionPage/RegionPage';
+import CulturalPage from './pages/CulturalPage/CulturalPage';
+import CulturalDetailView from './pages/CulturalPage/CulturalDetailView';
 import ShoppingPage from './pages/ShoppingPage/ShoppingPage';
 import CollectionPage from './pages/CollectionPage/CollectionPage';
 import ProductPage from './pages/ProductPage/ProductPage';
@@ -74,6 +76,20 @@ export const router = createBrowserRouter([
                 ],
             },
 
+            // Culture Page (Northeast specific)
+            {
+                path: 'northeast/culture',
+                element: <CulturalPage />,
+            },
+            {
+                path: 'northeast/culture/:category',
+                element: <CulturalPage />,
+            },
+            {
+                path: 'northeast/culture/:category/:id',
+                element: <CulturalDetailView />,
+            },
+
             // Individual Destination Page (New Pattern)
             // e.g. /manipur/destination/HP011
             {
@@ -103,6 +119,19 @@ export const router = createBrowserRouter([
                     {
                         path: 'shopping',
                         element: <ShoppingPage />,
+                    },
+                    // Culture Page
+                    {
+                        path: 'culture',
+                        element: <CulturalPage />,
+                    },
+                    {
+                        path: 'culture/:category',
+                        element: <CulturalPage />,
+                    },
+                    {
+                        path: 'culture/:category/:id',
+                        element: <CulturalDetailView />,
                     }
                 ],
             },
@@ -112,6 +141,8 @@ export const router = createBrowserRouter([
                 path: 'shopping',
                 element: <ShoppingPage />,
             },
+
+
             {
                 path: 'shopping/collection/:category',
                 element: <CollectionPage />,

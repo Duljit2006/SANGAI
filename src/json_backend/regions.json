@@ -88,8 +88,12 @@
             },
             {
                 "title": "Food as Climate",
-                "insight": "Fermented, smoked, dried—every preservation technique tells of monsoons survived and winters endured",
                 "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800"
+            },
+            {
+                "title": "Wild Sanctuaries",
+                "insight": "Home to rare species and vast forests, nature here is not just a resource but a living deity",
+                "imageUrl": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800"
             }
         ],
         "contributions": [

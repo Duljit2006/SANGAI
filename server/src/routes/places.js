@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { Place, Homestay } from '../models/index.js';
+import upload from '../middleware/upload.js';
 import ApiError from '../utils/ApiError.js';
 
 const router = Router();
@@ -16,7 +17,7 @@ router.get('/', async (req, res, next) => {
             tags,
             isHiddenGem,
             page = 1,
-            limit = 20
+            limit = 8 // Default to 8 as requested
         } = req.query;
 
         // Build filter
@@ -151,6 +152,34 @@ router.get('/:id', async (req, res, next) => {
         });
     }
     catch (error) {
+        next(error);
+    }
+});
+
+/**
+ * POST /api/places/upload
+ * Upload a new image and return the Cloudinary URL.
+ */
+router.post('/upload', upload.single('image'), async (req, res, next) => {
+    try {
+        if (!req.file) {
+            throw ApiError.badRequest('No image file provided');
+        }
+
+        const imageUrl = req.file.path;
+
+        res.json({
+            success: true,
+            message: 'Uploaded successfully',
+            imageUrl: imageUrl,
+            data: {
+                url: imageUrl,
+                format: req.file.format, // Cloudinary specific
+                width: req.file.width,
+                height: req.file.height
+            }
+        });
+    } catch (error) {
         next(error);
     }
 });

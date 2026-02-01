@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import './ShoppingSection.css';
 
 const ShoppingSection = ({
@@ -18,19 +18,19 @@ const ShoppingSection = ({
             title: "Craft",
             subtitle: "Handwoven & Handmade Treasures",
             image: "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=100,fit=scale-down,slow-connection-quality=45/home/store-section/basket.png",
-            link: "https://themeghalayanage.store/collections/craft"
+            link: "/collections/craft"
         },
         {
             title: "Textile",
             subtitle: "Traditional Threads & Patterns",
             image: "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=100,fit=scale-down,slow-connection-quality=45/home/store-section/shawl.png",
-            link: "https://themeghalayanage.store/collections/textile"
+            link: "/collections/textile"
         },
         {
             title: "Food",
             subtitle: "Homegrown Flavors & Preserves",
             image: "https://meghtour.web-assets.org/cdn-cgi/image/format=auto,width=1200,quality=100,fit=scale-down,slow-connection-quality=45/home/store-section/honey.png",
-            link: "https://themeghalayanage.store/collections/food"
+            link: "/collections/food"
         }
     ];
 
@@ -54,11 +54,9 @@ const ShoppingSection = ({
 
                 <div className="shopping-grid">
                     {displayItems.map((item, index) => (
-                        <a
+                        <Link
                             key={index}
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            to={item.link}
                             className="shopping-card"
                         >
                             <div className="shopping-card-text">
@@ -73,7 +71,7 @@ const ShoppingSection = ({
                                     loading="lazy"
                                 />
                             </figure>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>

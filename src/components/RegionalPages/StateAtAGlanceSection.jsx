@@ -1,8 +1,19 @@
 import React from 'react';
-import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
+import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import stateGeoJSONData from '../../MAP/NEW STATES.json'; // Import GeoJSON Data
 import './StateAtAGlanceSection.css';
+
+// Component to update map view when coordinates change
+function ChangeView({ center, zoom }) {
+    const map = useMap();
+    React.useEffect(() => {
+        if (center && center[0] && center[1]) {
+            map.setView(center, zoom);
+        }
+    }, [center, zoom, map]);
+    return null;
+}
 
 // Removed GOOGLE_MAPS_KEY as we are switching to OpenStreetMap
 // Open-Meteo is free and requires no API key.
@@ -17,6 +28,46 @@ const STATE_COORDINATES = {
     'Sikkim': { lat: 27.3389, lng: 88.6065 },            // Gangtok
     'Tripura': { lat: 23.8315, lng: 91.2868 },           // Agartala
     'Northeast India': { lat: 26.244, lng: 92.537 }      // Regional Center
+};
+
+// District headquarters coordinates (for district-level pages)
+const DISTRICT_COORDINATES = {
+    // Manipur Districts
+    'Imphal West': { lat: 24.8170, lng: 93.9100 },
+    'Imphal East': { lat: 24.8170, lng: 93.9650 },
+    'Bishnupur': { lat: 24.6249, lng: 93.7759 },
+    'Thoubal': { lat: 24.6377, lng: 94.0011 },
+    'Churachandpur': { lat: 24.3333, lng: 93.6833 },
+    'Chandel': { lat: 24.4333, lng: 94.0167 },
+    'Senapati': { lat: 25.2700, lng: 94.0200 },
+    'Ukhrul': { lat: 25.1167, lng: 94.3667 },
+    'Tamenglong': { lat: 24.9833, lng: 93.5333 },
+    'Jiribam': { lat: 24.7975, lng: 93.1100 },
+    'Kakching': { lat: 24.4975, lng: 93.9850 },
+    'Kangpokpi': { lat: 25.1300, lng: 93.9700 },
+    'Tengnoupal': { lat: 24.2500, lng: 94.2500 },
+    'Pherzawl': { lat: 24.4700, lng: 93.0800 },
+    'Noney': { lat: 25.0000, lng: 93.4500 },
+    'Kamjong': { lat: 25.4167, lng: 94.4833 },
+    // Meghalaya Districts
+    'East Khasi Hills': { lat: 25.5788, lng: 91.8933 },
+    'West Khasi Hills': { lat: 25.5300, lng: 91.2800 },
+    'Ri Bhoi': { lat: 25.9000, lng: 91.9200 },
+    'East Jaintia Hills': { lat: 25.4500, lng: 92.2000 },
+    'West Jaintia Hills': { lat: 25.4833, lng: 92.3667 },
+    'South West Khasi Hills': { lat: 25.3500, lng: 91.2000 },
+    'East Garo Hills': { lat: 25.5167, lng: 90.3333 },
+    'West Garo Hills': { lat: 25.5200, lng: 90.2200 },
+    'North Garo Hills': { lat: 25.8700, lng: 90.3500 },
+    'South Garo Hills': { lat: 25.3000, lng: 90.5000 },
+    'South West Garo Hills': { lat: 25.2200, lng: 89.9000 },
+    // Assam Key Districts
+    'Kamrup Metropolitan': { lat: 26.1445, lng: 91.7362 },
+    'Jorhat': { lat: 26.7465, lng: 94.2026 },
+    'Dibrugarh': { lat: 27.4728, lng: 94.9120 },
+    'Golaghat': { lat: 26.5176, lng: 93.9626 },
+    'Majuli': { lat: 26.9500, lng: 94.1667 },
+    'Sivasagar': { lat: 26.9826, lng: 94.6380 }
 };
 
 // Encoded Polylines or Coordinate Strings for State Boundaries
@@ -38,16 +89,18 @@ const getWeatherDetails = (code) => {
     return { desc: 'Unknown', icon: 'cloud' };
 };
 
-export default function StateAtAGlanceSection({ glance, stateName }) {
+export default function StateAtAGlanceSection({ glance, stateName, coordinates: propCoordinates, locationName }) {
     const [weather, setWeather] = React.useState(null);
     const [loadingWeather, setLoadingWeather] = React.useState(true);
 
-    React.useEffect(() => {
-        if (!stateName) return;
+    // Use provided coordinates or fall back to state coordinates
+    const displayName = locationName || stateName;
 
-        const coords = STATE_COORDINATES[stateName];
+    React.useEffect(() => {
+        // Use prop coordinates if provided, otherwise look up district then state coordinates
+        const coords = propCoordinates || DISTRICT_COORDINATES[locationName] || STATE_COORDINATES[stateName];
         if (!coords) {
-            console.warn(`No coordinates found for ${stateName}`);
+            console.warn(`No coordinates found for ${displayName}`);
             setLoadingWeather(false);
             return;
         }
@@ -80,7 +133,7 @@ export default function StateAtAGlanceSection({ glance, stateName }) {
         };
 
         fetchWeather();
-    }, [stateName]);
+    }, [stateName, propCoordinates, displayName]);
 
     if (!glance) return null;
 
@@ -96,8 +149,11 @@ export default function StateAtAGlanceSection({ glance, stateName }) {
         { icon: 'straighten', label: 'Area', value: glance.area }
     ].filter(item => item.value);
 
+    // Use prop coordinates if provided, otherwise look up district then state coordinates
+    const mapCoords = propCoordinates || DISTRICT_COORDINATES[locationName] || STATE_COORDINATES[stateName] || { lat: 26.2006, lng: 92.9376 };
+
     // Google Maps Link
-    const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(stateName + ', India')}`;
+    const googleMapsLink = `https://www.google.com/maps/place/${encodeURIComponent(displayName + ', India')}`;
 
     return (
         <section className="glance-section-redesigned">
@@ -135,8 +191,8 @@ export default function StateAtAGlanceSection({ glance, stateName }) {
                     <div className="glance-map-wrapper">
                         {/* Leaflet Map */}
                         <MapContainer
-                            center={[STATE_COORDINATES[stateName]?.lat || 26.2006, STATE_COORDINATES[stateName]?.lng || 92.9376]}
-                            zoom={7}
+                            center={[mapCoords.lat, mapCoords.lng]}
+                            zoom={propCoordinates ? 10 : 7}
                             scrollWheelZoom={false}
                             className="glance-leaflet-map"
                             zoomControl={false}
@@ -146,6 +202,7 @@ export default function StateAtAGlanceSection({ glance, stateName }) {
                                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
+                            <ChangeView center={[mapCoords.lat, mapCoords.lng]} zoom={locationName ? 10 : 7} />
                             {/* Overlay State Boundary if found */}
                             {(() => {
                                 const stateFeature = stateGeoJSONData?.features?.find(
@@ -203,7 +260,7 @@ export default function StateAtAGlanceSection({ glance, stateName }) {
                             </div>
                         )}
 
-                        <a href={`https://www.google.com/search?q=weather+${stateName}`} target="_blank" rel="noreferrer" className="weather-link">
+                        <a href={`https://www.google.com/search?q=weather+${displayName}`} target="_blank" rel="noreferrer" className="weather-link">
                             <span className="material-symbols-outlined arrow-icon">chevron_right</span>
                             Weather Forecast
                             <span className="material-symbols-outlined link-icon">call_made</span>
