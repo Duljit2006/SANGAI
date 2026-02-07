@@ -8,6 +8,9 @@
         "start": "node src/app.js",
         "dev": "node --watch src/app.js",
         "seed": "node scripts/seed.js",
+        "seed:content": "node scripts/seed_page_content.js",
+        "backup": "node scripts/backup_db_to_json.js",
+        "update:content": "node scripts/update_content.js",
         "lint": "eslint src/"
     },
     "dependencies": {

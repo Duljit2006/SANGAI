@@ -68,9 +68,22 @@ const districtSchema = new mongoose.Schema(
         // Known For (quick facts)
         knownFor: [String],
 
+
         // Stats Section
         population: String,
         area: String,
+
+        // NEW: Glance Description (District specific)
+        glance: {
+            description: String
+        },
+
+        // NEW: Gateway Section Content
+        gateway: {
+            title: String,
+            description: String
+        },
+
         location: {
             lat: Number,
             lng: Number

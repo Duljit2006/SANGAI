@@ -42,6 +42,10 @@ export default function CMSDefiningThemesManager() {
     const [saving, setSaving] = useState(false);
     const [message, setMessage] = useState({ type: '', text: '' });
 
+    const getAuthHeaders = () => ({
+        'Authorization': 'Basic ' + btoa('dulumoni:dulumoni')
+    });
+
     // Fetch states list
     const fetchStates = async () => {
         setLoading(true);
@@ -208,6 +212,7 @@ export default function CMSDefiningThemesManager() {
         try {
             const res = await fetch(`${API_BASE}/cms/upload`, {
                 method: 'POST',
+                headers: getAuthHeaders(),
                 body: formData
             });
             const json = await res.json();
@@ -238,7 +243,7 @@ export default function CMSDefiningThemesManager() {
 
             const res = await fetch(endpoint, {
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { ...getAuthHeaders(), 'Content-Type': 'application/json' },
                 body: JSON.stringify({ definingThemes: themes })
             });
 

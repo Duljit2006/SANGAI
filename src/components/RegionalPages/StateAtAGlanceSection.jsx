@@ -162,10 +162,11 @@ export default function StateAtAGlanceSection({ glance, stateName, coordinates: 
                 {/* Left Column: Title, Description, Stats Grid */}
                 <div className="glance-left-column">
                     <div className="glance-header-content">
+
                         <h2 className="glance-main-title">At a Glance</h2>
                         <div className="glance-separator"></div>
                         <p className="glance-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                            {glance?.description || `Discover the beauty and culture of ${displayName}, a land of natural wonders and rich heritage.`}
                         </p>
                     </div>
 

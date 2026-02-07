@@ -15,9 +15,9 @@ import mongoose from 'mongoose';
 const stateSchema = new mongoose.Schema(
     {
         _id: { type: String, required: true }, // "MN" for Manipur
-        code: { type: String, required: true, unique: true, index: true }, // "MN"
+        code: { type: String, required: true, unique: true }, // "MN"
         name: { type: String, required: true }, // "Manipur"
-        slug: { type: String, required: true, unique: true, index: true }, // "manipur"
+        slug: { type: String, required: true, unique: true }, // "manipur"
         regionId: { type: String, required: true, ref: 'Region', default: 'NE' },
 
         // Section 1: Hero - The State's Essence
@@ -56,7 +56,20 @@ const stateSchema = new mongoose.Schema(
             languages: [String],
             climate: String, // "Subtropical monsoon"
             population: String, // Approximate, not exact numbers
-            area: String // In sq km, approximate
+            area: String, // In sq km, approximate
+            description: String // NEW: Glance description
+        },
+
+        // NEW: Main Description Section
+        description: {
+            title: String,
+            content: String
+        },
+
+        // NEW: Gateway Section Content
+        gateway: {
+            title: String,
+            description: String
         },
 
         // Section 3: The Land & Its Memory

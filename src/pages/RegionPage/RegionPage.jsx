@@ -260,7 +260,7 @@ function StateOverview({ data, heroSlides }) {
             {/* Description Section */}
             <DescriptionSection
                 title={`Welcome to ${data.name}`}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                description={data.description?.content || data.glance?.description}
                 images={heroSlides}
             />
 
@@ -368,7 +368,7 @@ function DistrictOverview({ data, heroSlides }) {
             {/* Description Section */}
             <DescriptionSection
                 title={`Welcome to ${data.districtName}`}
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                description={data.description?.content || data.senseOfPlace?.oneLiner}
                 images={heroSlides}
             />
 
@@ -377,6 +377,7 @@ function DistrictOverview({ data, heroSlides }) {
             {/* At a Glance Section */}
             <StateAtAGlanceSection
                 glance={{
+                    description: data.glance?.description || data.senseOfPlace?.oneLiner,
                     capital: data.districtName,
                     landscapeType: data.context?.geographicNote?.slice(0, 50) || 'Hilly Terrain',
                     languages: ['Local Dialects', 'English'],
@@ -394,14 +395,14 @@ function DistrictOverview({ data, heroSlides }) {
             />
 
             {/* Land & Memory Section */}
-            <NarrativeBlock
-                paragraphs={[
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                ]}
-                title="Land & Memory"
-                tone="philosophical"
-                align="center"
-            />
+            {(data.sharedStory?.paragraphs?.length > 0 || data.landMemory?.narrative) && (
+                <NarrativeBlock
+                    paragraphs={data.sharedStory?.paragraphs || [data.landMemory?.narrative]}
+                    title="Land & Memory"
+                    tone="philosophical"
+                    align="center"
+                />
+            )}
 
             {/* Section 2: Context */}
             {data.context?.geographicNote && (

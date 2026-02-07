@@ -6,6 +6,7 @@ import CMSCulturalContent from './CMSCulturalContent';
 import CMSCollageManager from './CMSCollageManager';
 import CMSDefiningThemesManager from './CMSDefiningThemesManager';
 import CMSContributionsManager from './CMSContributionsManager';
+import CMSPageContentManager from './CMSPageContentManager';
 
 export default function CMSDashboard() {
     const [activeTab, setActiveTab] = useState('festivals'); // tabs: festivals, destinations, hero-images, cultural-content, state-content, collage-images, defining-themes, contributions
@@ -21,7 +22,7 @@ export default function CMSDashboard() {
 
     useEffect(() => {
         // Skip fetching items if tab is specialized component
-        if (activeTab === 'hero-images' || activeTab === 'state-content' || activeTab === 'cultural-content' || activeTab === 'collage-images' || activeTab === 'defining-themes' || activeTab === 'contributions') return;
+        if (activeTab === 'hero-images' || activeTab === 'state-content' || activeTab === 'cultural-content' || activeTab === 'collage-images' || activeTab === 'defining-themes' || activeTab === 'contributions' || activeTab === 'page-content') return;
         fetchItems();
     }, [activeTab]);
 
@@ -178,16 +179,28 @@ export default function CMSDashboard() {
                         >
                             Contributions
                         </button>
+                        <button
+                            onClick={() => setActiveTab('page-content')}
+                            style={{
+                                padding: '8px 16px',
+                                border: 'none',
+                                background: activeTab === 'page-content' ? '#333' : '#eee',
+                                color: activeTab === 'page-content' ? 'white' : 'black',
+                                cursor: 'pointer', borderRadius: '4px'
+                            }}
+                        >
+                            Page Texts
+                        </button>
                     </div>
                 </div>
-                {activeTab !== 'hero-images' && activeTab !== 'state-content' && activeTab !== 'cultural-content' && activeTab !== 'collage-images' && activeTab !== 'defining-themes' && activeTab !== 'contributions' && (
+                {activeTab !== 'hero-images' && activeTab !== 'state-content' && activeTab !== 'cultural-content' && activeTab !== 'collage-images' && activeTab !== 'defining-themes' && activeTab !== 'contributions' && activeTab !== 'page-content' && (
                     <Link to={activeTab === 'festivals' ? "/dev-cms/festivals/new" : "/dev-cms/destinations/new"} className="add-btn">
                         + Add New {activeTab === 'festivals' ? 'Festival' : 'Destination'}
                     </Link>
                 )}
             </div>
 
-            {error && activeTab !== 'hero-images' && activeTab !== 'state-content' && activeTab !== 'cultural-content' && <div className="error">{error}</div>}
+            {error && activeTab !== 'hero-images' && activeTab !== 'state-content' && activeTab !== 'cultural-content' && activeTab !== 'page-content' && <div className="error">{error}</div>}
 
             <div style={{ padding: '20px' }}>
                 {activeTab === 'defining-themes' ? (
@@ -202,6 +215,8 @@ export default function CMSDashboard() {
                     <CMSHeroManager />
                 ) : activeTab === 'contributions' ? (
                     <CMSContributionsManager />
+                ) : activeTab === 'page-content' ? (
+                    <CMSPageContentManager />
                 ) : (
                     <table className="data-table">
                         <thead>

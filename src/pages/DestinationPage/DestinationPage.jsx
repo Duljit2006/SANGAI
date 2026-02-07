@@ -1,52 +1,86 @@
+
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { getPlaceById } from '../../api/apiService';
 import './DestinationPage.css';
 
 /**
  * Individual Destination Page
  * 
  * Features:
- * - Hero image with name + tagline
+ * - Hero image with name + shortDescription
  * - Back button
- * - Sections: Description, Cultural Significance, History, Tourism Impact
- * - Practical info: Best time, difficulty, eco-tips, Google Maps link
- * - Nearby festivals (horizontal scroll)
- * - Nearby homestays (horizontal scroll)
+ * - Sections: Overview, Cultural Significance, Local Beliefs, Logistics
+ * - Practical info: Best time, tips, Google Maps link
  */
 export default function DestinationPage() {
     const { id } = useParams();
     const navigate = useNavigate();
+    const [destination, setDestination] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // Placeholder data - will be fetched from API later
-    const destination = {
-        id: id,
-        name: 'Loktak Lake',
-        tagline: 'The Floating Jewel of Manipur',
-        heroImage: 'https://placehold.co/1920x800/3a7a5a/ffffff?text=Loktak+Lake+Hero',
-        description: 'Loktak Lake is the largest freshwater lake in Northeast India, located in the state of Manipur. It is famous for the phumdis floating over it, and the Keibul Lamjao National Park, the only floating national park in the world.',
-        culturalSignificance: 'The lake holds immense cultural importance for the Meitei people. It is considered sacred and features prominently in local folklore and traditions. The fishing communities living on the phumdis have developed a unique way of life that has been sustained for generations.',
-        history: 'Archaeological evidence suggests that the lake and its surrounding areas have been inhabited since ancient times. The lake has witnessed numerous historical events and has been a silent witness to the evolution of Manipuri civilization.',
-        tourismImpact: 'Sustainable tourism initiatives have been implemented to protect the fragile ecosystem while allowing visitors to experience the unique beauty of the lake. Local communities benefit from eco-tourism activities.',
-        practicalInfo: {
-            bestTime: 'October - April',
-            difficulty: 'Easy',
-            ecoTip: 'Please do not litter. Take all trash with you and respect the floating ecosystem.',
-        },
-    };
+    useEffect(() => {
+        async function fetchDestination() {
+            try {
+                setLoading(true);
+                const data = await getPlaceById(id);
+                if (!data) {
+                    throw new Error('Destination not found');
+                }
+                setDestination(data);
+            } catch (err) {
+                console.error("Failed to fetch destination:", err);
+                setError(err.message);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        if (id) {
+            fetchDestination();
+        }
+    }, [id]);
 
     const handleBack = () => {
         navigate(-1);
     };
 
     const handleOpenMaps = () => {
-        window.open(`https://maps.google.com/?q=${destination.name}+Manipur+India`, '_blank');
+        if (!destination) return;
+        const query = destination.location ? `${destination.location.lat},${destination.location.lng}` : `${destination.name} Northeast India`;
+        window.open(`https://maps.google.com/?q=${query}`, '_blank');
     };
+
+    if (loading) {
+        return (
+            <div className="destination-page loading">
+                <div className="loading-spinner"></div>
+                <p>Loading destination details...</p>
+            </div>
+        );
+    }
+
+    if (error || !destination) {
+        return (
+            <div className="destination-page error">
+                <h2>Destination not found</h2>
+                <button className="back-btn" onClick={handleBack}>← Go Back</button>
+            </div>
+        );
+    }
+
+    // Helper to get hero image
+    const heroImageUrl = destination.images && destination.images.length > 0
+        ? destination.images[0].url
+        : 'https://placehold.co/1920x800/333/fff?text=No+Image';
 
     return (
         <div className="destination-page">
             {/* Hero Section */}
             <section className="destination-hero">
                 <img
-                    src={destination.heroImage}
+                    src={heroImageUrl}
                     alt={destination.name}
                     className="hero-image"
                 />
@@ -56,7 +90,7 @@ export default function DestinationPage() {
                     </button>
                     <div className="hero-content">
                         <h1 className="destination-name">{destination.name}</h1>
-                        <p className="destination-tagline">{destination.tagline}</p>
+                        <p className="destination-tagline">{destination.shortDescription}</p>
                     </div>
                 </div>
             </section>
@@ -64,54 +98,96 @@ export default function DestinationPage() {
             {/* Content Sections */}
             <section className="destination-content">
                 <div className="content-container">
-                    {/* Description */}
-                    <div className="content-section">
-                        <h2 className="section-title">Overview</h2>
-                        <p className="section-text">{destination.description}</p>
-                    </div>
+
+                    {/* Overview */}
+                    {destination.story?.overview && (
+                        <div className="content-section">
+                            <h2 className="section-title">Overview</h2>
+                            <p className="section-text">{destination.story.overview}</p>
+                        </div>
+                    )}
 
                     {/* Cultural Significance */}
-                    <div className="content-section">
-                        <h2 className="section-title">Cultural Significance</h2>
-                        <p className="section-text">{destination.culturalSignificance}</p>
-                    </div>
+                    {destination.story?.culturalSignificance && (
+                        <div className="content-section">
+                            <h2 className="section-title">Cultural Significance</h2>
+                            <p className="section-text">{destination.story.culturalSignificance}</p>
+                        </div>
+                    )}
 
-                    {/* History */}
-                    <div className="content-section">
-                        <h2 className="section-title">History</h2>
-                        <p className="section-text">{destination.history}</p>
-                    </div>
+                    {/* Local Belief / Folklore */}
+                    {destination.story?.localBelief && (
+                        <div className="content-section">
+                            <h2 className="section-title">Local Beliefs</h2>
+                            <p className="section-text">{destination.story.localBelief}</p>
+                        </div>
+                    )}
 
-                    {/* Tourism Impact */}
-                    <div className="content-section">
-                        <h2 className="section-title">Impact of Tourism</h2>
-                        <p className="section-text">{destination.tourismImpact}</p>
-                    </div>
+                    {/* Quote */}
+                    {destination.story?.quote && (
+                        <div className="content-section quote-section">
+                            <blockquote className="destination-quote">
+                                "{destination.story.quote}"
+                            </blockquote>
+                        </div>
+                    )}
+
+                    {/* Highlights */}
+                    {destination.experience?.highlights?.length > 0 && (
+                        <div className="content-section">
+                            <h2 className="section-title">Highlights</h2>
+                            <ul className="highlights-list">
+                                {destination.experience.highlights.map((highlight, index) => (
+                                    <li key={index} className="highlight-item">{highlight}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    )}
 
                     {/* Practical Information */}
                     <div className="practical-info">
                         <h2 className="section-title">Before You Visit</h2>
                         <div className="info-cards">
-                            <div className="info-card">
-                                <span className="info-icon">📅</span>
-                                <span className="info-label">Best Time</span>
-                                <span className="info-value">{destination.practicalInfo.bestTime}</span>
-                            </div>
-                            <div className="info-card">
-                                <span className="info-icon">🥾</span>
-                                <span className="info-label">Difficulty</span>
-                                <span className="info-value">{destination.practicalInfo.difficulty}</span>
-                            </div>
-                            <div className="info-card eco-tip">
-                                <span className="info-icon">🌱</span>
-                                <span className="info-label">Eco Tip</span>
-                                <span className="info-value">{destination.practicalInfo.ecoTip}</span>
-                            </div>
+                            {destination.bestTimeToVisit && (
+                                <div className="info-card">
+                                    <span className="info-icon">📅</span>
+                                    <span className="info-label">Best Time</span>
+                                    <span className="info-value">{destination.bestTimeToVisit}</span>
+                                </div>
+                            )}
+                            {destination.type && (
+                                <div className="info-card">
+                                    <span className="info-icon">🏷️</span>
+                                    <span className="info-label">Type</span>
+                                    <span className="info-value capitalized">{destination.type}</span>
+                                </div>
+                            )}
+                            {/* Visitor Tips as Eco Tip placeholder if available */}
+                            {destination.experience?.visitorTips?.length > 0 && (
+                                <div className="info-card eco-tip">
+                                    <span className="info-icon">💡</span>
+                                    <span className="info-label">Tip</span>
+                                    <span className="info-value">{destination.experience.visitorTips[0]}</span>
+                                </div>
+                            )}
                         </div>
                         <button className="maps-button" onClick={handleOpenMaps}>
                             📍 Open in Google Maps
                         </button>
                     </div>
+
+                    {/* Logistics / Getting There */}
+                    {destination.logistics && (
+                        <div className="content-section logistics-section">
+                            <h2 className="section-title">Getting There</h2>
+                            {destination.logistics.nearestTown && (
+                                <p><strong>Nearest Town:</strong> {destination.logistics.nearestTown} ({destination.logistics.distanceFromNearestTown})</p>
+                            )}
+                            {destination.logistics.transportationInfo && (
+                                <p className="transport-info">{destination.logistics.transportationInfo}</p>
+                            )}
+                        </div>
+                    )}
                 </div>
             </section>
         </div>

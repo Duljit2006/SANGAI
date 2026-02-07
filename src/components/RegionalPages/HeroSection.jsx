@@ -93,6 +93,10 @@ export default function HeroSection({
 
                 <h1 className="hero-title">{title}</h1>
 
+                {tagline && (
+                    <p className="hero-tagline">{tagline}</p>
+                )}
+
                 {subtitle && (
                     <p className="hero-subtitle">{subtitle}</p>
                 )}

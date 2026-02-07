@@ -3,12 +3,12 @@ import mongoose from 'mongoose';
 const placeSchema = new mongoose.Schema(
     {
         _id: { type: String, required: true },
-        districtId: { type: String, ref: 'District', required: true, index: true },
+        districtId: { type: String, ref: 'District', required: true },
         name: { type: String, required: true },
         type: {
             type: String,
             required: true,
-            enum: ['waterfall', 'trail', 'hill', 'village', 'lake', 'cave', 'forest', 'valley', 'nature', 'temple', 'monument', 'park', 'river', 'viewpoint'],
+            enum: ['waterfall', 'trail', 'hill', 'village', 'lake', 'cave', 'forest', 'valley', 'nature', 'temple', 'monument', 'park', 'river', 'viewpoint', 'monastery', 'pass', 'island', 'wildlife', 'heritage', 'canyon'],
             index: true
         },
         shortDescription: { type: String },
@@ -50,8 +50,8 @@ const placeSchema = new mongoose.Schema(
             }
         ],
         bestTimeToVisit: { type: String },
-        isHiddenGem: { type: Boolean, default: false, index: true },
-        tagIds: [{ type: String, ref: 'Tag', index: true }],
+        isHiddenGem: { type: Boolean, default: false },
+        tagIds: [{ type: String, ref: 'Tag' }],
         createdAt: { type: Date, default: Date.now }
     },
     {

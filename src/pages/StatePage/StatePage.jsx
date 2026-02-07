@@ -184,7 +184,7 @@ function StateOverview({ stateSlug, displayName }) {
 
             <DescriptionSection
                 title={`Welcome to ${data.name}`}
-                description={data.description || `Explore the rich culture, stunning landscapes, and vibrant traditions of ${data.name}.`}
+                description={data.description?.content || `Explore the rich culture, stunning landscapes, and vibrant traditions of ${data.name}.`}
                 images={(data.collageImages && data.collageImages.length > 0) ? data.collageImages : heroSlides}
             />
 
@@ -199,7 +199,13 @@ function StateOverview({ stateSlug, displayName }) {
             )}
 
             {data.glance && (
-                <StateAtAGlanceSection glance={data.glance} stateName={data.name} />
+                <StateAtAGlanceSection
+                    glance={{
+                        ...data.glance,
+                        description: data.glance?.description // Passed to Glance Section
+                    }}
+                    stateName={data.name}
+                />
             )}
 
             <ShoppingSection title={`Crafts of ${data.name}`} />
@@ -231,7 +237,8 @@ function StateOverview({ stateSlug, displayName }) {
                         // Override path to use hierarchical route
                         path: `/northeast/${stateSlug}/${d.slug}`
                     }))}
-                    title={`Explore ${data.name}'s Districts`}
+                    title={data.gateway?.title || `Explore ${data.name}'s Districts`}
+                    description={data.gateway?.description || `Discover the hidden gems across the diverse districts of ${data.name}.`}
                     basePath={`/northeast/${stateSlug}`}
                     entityType="district"
                 />

@@ -16,7 +16,7 @@ const regionSchema = new mongoose.Schema(
     {
         _id: { type: String, required: true }, // "NE" for Northeast
         name: { type: String, required: true }, // "Northeast India"
-        slug: { type: String, required: true, unique: true, index: true }, // "northeast"
+        slug: { type: String, required: true, unique: true }, // "northeast"
 
         // Section 1: Hero - The Identity
         tagline: { type: String, required: true }, // "The Hidden Jewel"
@@ -38,6 +38,28 @@ const regionSchema = new mongoose.Schema(
             title: { type: String, required: true },
             description: String
         }],
+
+        // NEW: Main Description Section
+        description: {
+            title: String,
+            content: String
+        },
+
+        // NEW: Glance Section Content
+        glance: {
+            description: String, // "Lorem ipsum..." replacement
+            states: String,
+            landscapeType: String,
+            languages: [String],
+            population: String,
+            area: String
+        },
+
+        // NEW: Gateway Section Content
+        gateway: {
+            title: String,
+            description: String
+        },
 
         // Section 3: A Shared Story (Short Narrative)
         sharedStory: {

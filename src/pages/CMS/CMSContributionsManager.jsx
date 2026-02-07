@@ -135,6 +135,10 @@ export default function CMSContributionsManager() {
     const [message, setMessage] = useState({ type: '', text: '' });
     const [uploadingId, setUploadingId] = useState(null);
 
+    const getAuthHeaders = () => ({
+        'Authorization': 'Basic ' + btoa('dulumoni:dulumoni')
+    });
+
     // Initial load of options
     useEffect(() => {
         loadOptions();
@@ -171,7 +175,7 @@ export default function CMSContributionsManager() {
                 ? `${API_BASE}/regions/${selectedSlug}`
                 : `${API_BASE}/states/${selectedSlug}`;
 
-            const res = await axios.get(url);
+            const res = await axios.get(url, { headers: getAuthHeaders() });
 
             // API returns { success: true, data: { ... } }
             // Axios response.data is the body
@@ -232,7 +236,7 @@ export default function CMSContributionsManager() {
         try {
             const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
             const res = await axios.post(`${API_BASE}/cms/upload`, formData, {
-                headers: { 'Content-Type': 'multipart/form-data' }
+                headers: { ...getAuthHeaders(), 'Content-Type': 'multipart/form-data' }
             });
 
             updateContribution(index, 'image.url', res.data.url);
@@ -255,7 +259,7 @@ export default function CMSContributionsManager() {
             // e.g. PUT /api/cms/regions/:slug/contributions
             const endpoint = `${API_BASE}/cms/${level}s/${selectedSlug}/contributions`;
 
-            await axios.put(endpoint, { contributions });
+            await axios.put(endpoint, { contributions }, { headers: getAuthHeaders() });
             setMessage({ type: 'success', text: 'Contributions saved successfully!' });
         } catch (err) {
             console.error(err);

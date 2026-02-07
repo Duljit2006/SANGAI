@@ -210,7 +210,8 @@ function DistrictOverview({ stateSlug, districtSlug, displayName, stateName }) {
                     landscapeType: data.context?.landscapeType || 'Varied Terrain',
                     languages: ['Local Dialects', 'English'],
                     population: data.population || 'N/A',
-                    area: data.area || 'N/A'
+                    area: data.area || 'N/A',
+                    description: data.glance?.description // Passed to Glance Section
                 }}
                 stateName={data.stateName}
                 coordinates={data.location ? { lat: data.location.lat, lng: data.location.lng } : null}
@@ -249,8 +250,8 @@ function DistrictOverview({ stateSlug, districtSlug, displayName, stateName }) {
                         ...d,
                         path: `/northeast/${stateSlug}/${d.slug}`
                     }))}
-                    title={`Explore More of ${stateName || 'This State'}`}
-                    description={`Discover all ${siblingDistricts.length} other districts in ${stateName || 'this state'}`}
+                    title={data.gateway?.title || `More in ${data.stateName}`}
+                    description={data.gateway?.description || `Continue your journey through ${data.stateName}.`}
                     basePath={`/northeast/${stateSlug}`}
                     entityType="district"
                 />

@@ -255,7 +255,7 @@ const TRIPURA_THEMES = [
 
 const THEMES_BY_SLUG = {
     'northeast': NORTHEAST_THEMES,
-    'arunachal-pradesh': ARUNACHAL_THEMES,
+    'arunachal_pradesh': ARUNACHAL_THEMES,
     'assam': ASSAM_THEMES,
     'manipur': MANIPUR_THEMES,
     'meghalaya': MEGHALAYA_THEMES,

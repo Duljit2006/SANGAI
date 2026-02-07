@@ -196,8 +196,8 @@ function NortheastOverview() {
 
             {/* Section 1.5: Description Split */}
             <DescriptionSection
-                title="Welcome to Northeast India"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                title={regionData.description?.title || "Welcome to Northeast India"}
+                description={regionData.description?.content || "A land of eight sisters, bound by mountains, rivers, and a tapestry of over 200 tribes."}
                 images={(regionData.collageImages && regionData.collageImages.length > 0) ? regionData.collageImages : heroSlides}
             />
 
@@ -208,11 +208,12 @@ function NortheastOverview() {
             <StateAtAGlanceSection
                 stateName="Northeast India"
                 glance={{
-                    states: "8 States",
-                    landscapeType: "Mountains & Valleys",
-                    languages: ["220+ Dialects", "English", "Hindi"],
-                    population: "~50 Million",
-                    area: "262,177 km²"
+                    states: regionData.glance?.states || "8 States",
+                    landscapeType: regionData.glance?.landscapeType || "Mountains & Valleys",
+                    languages: regionData.glance?.languages || ["220+ Dialects"],
+                    population: regionData.glance?.population || "~50 Million",
+                    area: regionData.glance?.area || "262,177 km²",
+                    description: regionData.glance?.description // Passed to Glance Section
                 }}
             />
 
@@ -266,7 +267,8 @@ function NortheastOverview() {
             {regionData.states?.length > 0 && (
                 <GatewayGrid
                     items={regionData.states}
-                    title="Explore the Eight Sisters"
+                    title={regionData.gateway?.title || "Explore the Eight Sisters"}
+                    description={regionData.gateway?.description || "Journey through the diverse landscapes and cultures of the eight northeastern states."}
                     basePath="/northeast"
                     entityType="state"
                 />

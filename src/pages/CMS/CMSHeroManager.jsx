@@ -153,30 +153,59 @@ export default function CMSHeroManager() {
     };
 
     const handleUpload = async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
+        const files = Array.from(e.target.files);
+        if (files.length === 0) return;
 
-        const formData = new FormData();
-        formData.append('image', file);
+        setSaving(true);
+        setMessage(`Uploading ${files.length} image(s)...`);
 
-        try {
-            setSaving(true);
-            const res = await fetch(`${API_BASE}/cms/upload`, {
-                method: 'POST',
-                headers: getAuthHeader(),
-                body: formData
-            });
-            const data = await res.json();
+        const uploadedImages = [];
+        let failedCount = 0;
 
-            if (data.success) {
-                // Add to local state
-                setHeroImages([...heroImages, { url: data.url, caption: 'New Image' }]);
+        // Upload all files in parallel
+        const uploadPromises = files.map(async (file) => {
+            const formData = new FormData();
+            formData.append('image', file);
+
+            try {
+                const res = await fetch(`${API_BASE}/cms/upload`, {
+                    method: 'POST',
+                    headers: getAuthHeader(),
+                    body: formData
+                });
+                const data = await res.json();
+
+                if (data.success) {
+                    return { url: data.url, caption: file.name.replace(/\.[^/.]+$/, '') };
+                } else {
+                    failedCount++;
+                    return null;
+                }
+            } catch (err) {
+                failedCount++;
+                return null;
             }
-        } catch (err) {
-            alert('Upload failed');
-        } finally {
-            setSaving(false);
+        });
+
+        const results = await Promise.all(uploadPromises);
+
+        // Filter successful uploads and add to state
+        const successfulUploads = results.filter(img => img !== null);
+        if (successfulUploads.length > 0) {
+            setHeroImages([...heroImages, ...successfulUploads]);
         }
+
+        // Show result message
+        if (failedCount > 0) {
+            setMessage(`Uploaded ${successfulUploads.length} image(s), ${failedCount} failed.`);
+        } else {
+            setMessage(`Successfully uploaded ${successfulUploads.length} image(s)!`);
+        }
+        setTimeout(() => setMessage(null), 3000);
+
+        // Reset file input
+        e.target.value = '';
+        setSaving(false);
     };
 
     const handleSave = async () => {
@@ -315,11 +344,12 @@ export default function CMSHeroManager() {
                         <input
                             type="file"
                             accept="image/*"
+                            multiple
                             onChange={handleUpload}
                             style={{ position: 'absolute', width: '100%', height: '100%', opacity: 0, cursor: 'pointer' }}
                         />
                         <span style={{ fontSize: '24px', color: '#666' }}>+</span>
-                        <span style={{ color: '#666' }}>Upload Image</span>
+                        <span style={{ color: '#666' }}>Upload Images</span>
                     </div>
                 )}
             </div>

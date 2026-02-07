@@ -87,7 +87,7 @@ const CulturalItemSchema = new mongoose.Schema({
 // Indexes for efficient querying
 CulturalItemSchema.index({ category: 1, 'scope.type': 1 });
 CulturalItemSchema.index({ 'scope.stateCode': 1 });
-CulturalItemSchema.index({ slug: 1 });
+// CulturalItemSchema.index({ slug: 1 }); // Redundant with unique: true
 
 // Helper to get primary image
 CulturalItemSchema.virtual('primaryImage').get(function () {
