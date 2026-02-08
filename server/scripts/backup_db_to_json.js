@@ -13,8 +13,10 @@ import {
     Guide,
     FestivalMaster,
     FestivalOccurrence,
-    Tag
+    Tag,
+    CulturalItem
 } from '../src/models/index.js';
+import Product from '../src/models/Product.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -97,6 +99,14 @@ async function backupDatabase() {
         // 9. Tags
         const tags = await Tag.find({});
         saveJSON('_legacy/tags.json', tags);
+
+        // 10. Cultural Items
+        const culturalItems = await CulturalItem.find({});
+        saveJSON('data/cultural_items.json', culturalItems);
+
+        // 11. Products
+        const products = await Product.find({});
+        saveJSON('data/products.json', products);
 
         console.log('\n🎉 Backup Complete! Your MongoDB data is now saved to src/json_backend.');
         console.log('   Running "npm run seed" will now use THIS data instead of reverting.');

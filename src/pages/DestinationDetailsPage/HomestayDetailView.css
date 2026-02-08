@@ -379,9 +379,7 @@
     padding: 0 15px;
 }
 
-.hdv-col-md-6 {
-    /* Responsive override if needed, but handled by general rules usually */
-}
+
 
 @media (max-width: 900px) {
     .hdv-col-lg-4 {

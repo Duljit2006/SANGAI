@@ -40,7 +40,7 @@ router.get('/:slug', async (req, res, next) => {
 
         // Get districts in this state
         const districts = await District.find({ stateCode: state.code })
-            .select('_id districtName slug tagline heroImage')
+            .select('_id districtName slug tagline heroImage heroImages')
             .sort({ districtName: 1 });
 
         // Get stats for the state

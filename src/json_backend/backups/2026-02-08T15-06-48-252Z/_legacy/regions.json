@@ -1,0 +1,255 @@
+[
+  {
+    "description": {
+      "title": "Welcome to the Land of the Seven Sisters",
+      "content": "Northeast India is a realm of enchantment, where the first rays of the sun kiss the snowy peaks of the Himalayas and the mighty Brahmaputra river weaves tales of ancient civilizations. A tapestry of eight distinct states, this region is a sanctuary of biodiversity, vibrant cultures, and untouched natural beauty. From the cloud-shrouded hills of Meghalaya to the dawn-lit mountains of Arunachal, every corner whispers stories of myths, legends, and a harmony between man and nature found nowhere else."
+    },
+    "glance": {
+      "description": "A biodiversity hotspot featuring 8 distinctive states, over 200 tribes, and landscapes ranging from the Himalayan peaks to tropical rainforests.",
+      "languages": []
+    },
+    "gateway": {
+      "title": "Journey to the Unexplored",
+      "description": "Embark on an adventure through the eight states, each a unique jewel in India's crown. Whether you seek spiritual solace, high-altitude trekking, or a deep dive into tribal heritage, the Northeast awaits."
+    },
+    "sharedStory": {
+      "paragraphs": [
+        "Northeast India is where the Himalayas meet the monsoons, creating landscapes that seem painted by nature herself.",
+        "For centuries, these mountains and valleys have been home to communities who understood that life and land are inseparable.",
+        "Isolation became a gift—preserving languages, crafts, and wisdom that the modern world has only begun to discover.",
+        "Today, the Northeast stands as a testament to what happens when people choose to live with nature rather than against it."
+      ],
+      "tone": "philosophical"
+    },
+    "peopleSection": {
+      "title": "People of the Hills and Valleys",
+      "description": "The Northeast is home to communities where the individual exists within the collective—where oral traditions carry history, where festivals mark seasons, and where every person knows the name of their land.",
+      "portraits": [
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1529693662653-9d480530a697?w=800",
+          "attribution": "Community elder, Nagaland",
+          "_id": "698682ea6f0122ce8d44f990",
+          "id": "698682ea6f0122ce8d44f990"
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800",
+          "attribution": "Weaver, Manipur",
+          "_id": "698682ea6f0122ce8d44f991",
+          "id": "698682ea6f0122ce8d44f991"
+        },
+        {
+          "imageUrl": "https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800",
+          "attribution": "Farmer, Assam",
+          "_id": "698682ea6f0122ce8d44f992",
+          "id": "698682ea6f0122ce8d44f992"
+        }
+      ]
+    },
+    "_id": "NE",
+    "name": "Northeast India",
+    "slug": "northeast",
+    "tagline": "Paradise Unexplored",
+    "heroImages": [
+      {
+        "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920",
+        "caption": "Misty mountains of Arunachal Pradesh",
+        "focus": "landscape",
+        "_id": "698682ea6f0122ce8d44f989",
+        "id": "698682ea6f0122ce8d44f989"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920",
+        "caption": "Traditional Naga warrior",
+        "focus": "people",
+        "_id": "698682ea6f0122ce8d44f98a",
+        "id": "698682ea6f0122ce8d44f98a"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1920",
+        "caption": "Living root bridges of Meghalaya",
+        "focus": "culture",
+        "_id": "698682ea6f0122ce8d44f98b",
+        "id": "698682ea6f0122ce8d44f98b"
+      }
+    ],
+    "definingThemes": [
+      {
+        "icon": "terrain",
+        "title": "Ancient Landscapes",
+        "description": "From snow-capped peaks to living root bridges, hills and valleys that have shaped life for millennia.",
+        "_id": "69868541510f13067ed136bf",
+        "id": "69868541510f13067ed136bf"
+      },
+      {
+        "icon": "diversity_3",
+        "title": "Cultural Mosaic",
+        "description": "Over 200 tribes, each with distinct languages, beliefs, and traditions woven into daily life.",
+        "_id": "69868541510f13067ed136c0",
+        "id": "69868541510f13067ed136c0"
+      },
+      {
+        "icon": "explore",
+        "title": "Borderland Identity",
+        "description": "A region where ancient trade routes meet, creating unique exchanges and resilient communities.",
+        "_id": "69868541510f13067ed136c1",
+        "id": "69868541510f13067ed136c1"
+      },
+      {
+        "icon": "eco",
+        "title": "Living Biodiversity",
+        "description": "One of the world's biodiversity hotspots, where communities have preserved nature for generations.",
+        "_id": "69868541510f13067ed136c2",
+        "id": "69868541510f13067ed136c2"
+      }
+    ],
+    "culturalThreads": [
+      {
+        "title": "Festival Rhythms",
+        "insight": "From Hornbill to Bihu, festivals here are not celebrations but the heartbeat of communities",
+        "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800",
+        "_id": "698682ea6f0122ce8d44f993",
+        "id": "698682ea6f0122ce8d44f993"
+      },
+      {
+        "title": "Music as Memory",
+        "insight": "Every song carries a story, every dance a prayer—music is how history travels through time",
+        "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800",
+        "_id": "698682ea6f0122ce8d44f994",
+        "id": "698682ea6f0122ce8d44f994"
+      },
+      {
+        "title": "Woven Stories",
+        "insight": "In the patterns of shawls and fabrics, you can read the identity of entire communities",
+        "imageUrl": "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800",
+        "_id": "698682ea6f0122ce8d44f995",
+        "id": "698682ea6f0122ce8d44f995"
+      },
+      {
+        "title": "Food as Climate",
+        "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800",
+        "_id": "698682ea6f0122ce8d44f996",
+        "id": "698682ea6f0122ce8d44f996"
+      },
+      {
+        "title": "Wild Sanctuaries",
+        "insight": "Home to rare species and vast forests, nature here is not just a resource but a living deity",
+        "imageUrl": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?w=800",
+        "_id": "698682ea6f0122ce8d44f997",
+        "id": "698682ea6f0122ce8d44f997"
+      }
+    ],
+    "contributions": [
+      {
+        "image": {
+          "url": "https://images.unsplash.com/photo-1596886472605-2244f0ce63a8?w=800",
+          "caption": "Northeast Biodiversity"
+        },
+        "icon": "eco",
+        "title": "A Living Laboratory",
+        "description": "Home to the world's wettest place, ancient forests, and species found nowhere else on Earth.",
+        "_id": "69868551118d1c7ab1726291",
+        "id": "69868551118d1c7ab1726291"
+      },
+      {
+        "image": {
+          "url": "https://images.unsplash.com/photo-1605648911000-848e02930264?w=800",
+          "caption": "Tribal Elder"
+        },
+        "icon": "psychology",
+        "title": "Indigenous Wisdom",
+        "description": "Sustainable farming, natural medicine, and conservation practices refined over generations.",
+        "_id": "69868551118d1c7ab1726292",
+        "id": "69868551118d1c7ab1726292"
+      },
+      {
+        "image": {
+          "url": "https://images.unsplash.com/photo-1582531029528-eb1c27b6aa61?w=800",
+          "caption": "Tea Gardens"
+        },
+        "icon": "agriculture",
+        "title": "Organic Heritage",
+        "description": "From Assam tea to Manipur's black rice, agriculture here is traditionally organic and biodiverse.",
+        "_id": "69868551118d1c7ab1726293",
+        "id": "69868551118d1c7ab1726293"
+      },
+      {
+        "image": {
+          "url": "https://images.unsplash.com/photo-1628081699042-886ec0b2b8cc?w=800",
+          "caption": "Handloom Weaving"
+        },
+        "icon": "brush",
+        "title": "Handloom Legacy",
+        "description": "Each state's weavers create textiles that are wearable art, recognized globally for their craftsmanship.",
+        "_id": "69868551118d1c7ab1726294",
+        "id": "69868551118d1c7ab1726294"
+      }
+    ],
+    "explorationCategories": [
+      {
+        "title": "Cultural Journeys",
+        "description": "Experience festivals, stay with communities, and learn traditions firsthand",
+        "icon": "theater_comedy",
+        "_id": "698682ea6f0122ce8d44f99c",
+        "id": "698682ea6f0122ce8d44f99c"
+      },
+      {
+        "title": "Nature-Led Travel",
+        "description": "Trek ancient trails, discover hidden valleys, and witness landscapes untouched by time",
+        "icon": "forest",
+        "_id": "698682ea6f0122ce8d44f99d",
+        "id": "698682ea6f0122ce8d44f99d"
+      },
+      {
+        "title": "Community Stays",
+        "description": "Live with local families, share meals, and understand life from the inside",
+        "icon": "cottage",
+        "_id": "698682ea6f0122ce8d44f99e",
+        "id": "698682ea6f0122ce8d44f99e"
+      },
+      {
+        "title": "Seasonal Festivals",
+        "description": "Plan your visit around major festivals when communities come alive with celebration",
+        "icon": "celebration",
+        "_id": "698682ea6f0122ce8d44f99f",
+        "id": "698682ea6f0122ce8d44f99f"
+      }
+    ],
+    "searchKeywords": [
+      "northeast india",
+      "seven sisters",
+      "eight sisters",
+      "ne india",
+      "hidden jewel",
+      "tribal india",
+      "himalayan foothills",
+      "biodiversity hotspot"
+    ],
+    "stateCount": 8,
+    "collageImages": [
+      {
+        "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920",
+        "caption": "Misty mountains of Arunachal Pradesh",
+        "focus": "landscape",
+        "_id": "698682ea6f0122ce8d44f989",
+        "id": "698682ea6f0122ce8d44f989"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1920",
+        "caption": "Traditional Naga warrior",
+        "focus": "people",
+        "_id": "698682ea6f0122ce8d44f98a",
+        "id": "698682ea6f0122ce8d44f98a"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=1920",
+        "caption": "Living root bridges of Meghalaya",
+        "focus": "culture",
+        "_id": "698682ea6f0122ce8d44f98b",
+        "id": "698682ea6f0122ce8d44f98b"
+      }
+    ],
+    "createdAt": "2026-02-07T00:10:18.860Z",
+    "updatedAt": "2026-02-07T00:25:25.217Z",
+    "id": "NE"
+  }
+]
